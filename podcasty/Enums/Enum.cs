@@ -16,7 +16,8 @@
         { Like,
         Favorite,
         Follow,
-        Comment }
+        Comment,
+        Dislike}
 
         public enum ActionType
         {

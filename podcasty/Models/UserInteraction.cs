@@ -10,7 +10,7 @@ namespace podcasty.Models
         public int UserId { get; set; }
         public int PodcastId { get; set; }
         public InteractionType Interaction { get; set; } // "like", "favorite", "follow", "comment"
-        public string CommentContent { get; set; }
+        public string?CommentContent { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
 
