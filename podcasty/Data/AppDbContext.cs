@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using podcasty.Enums;
-using podcasty.Models; 
+using podcasty.Models; // Use your models namespace
 
 public class AppDbContext : IdentityDbContext<User, IdentityRole<int>, int>
 {
