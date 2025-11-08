@@ -6,6 +6,7 @@ using Microsoft.IdentityModel.Tokens;
 using podcasty.Interfaces;
 using podcasty.Models;
 using podcasty.Repos;
+using podcasty.Repositories;
 using System.Text;
 
 
@@ -24,6 +25,7 @@ internal class Program
         builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("CS")));
         builder.Services.AddIdentity<User, IdentityRole<int>>().AddEntityFrameworkStores<AppDbContext>();
         builder.Services.AddScoped<IUserInteractionRepository, UserInteractionrepo>();
+        builder.Services.AddScoped<IPlayHistoryRepository, PlayHistoryRepo>();
         builder.Services.AddScoped<AppDbContext>();
 
         builder.Services.AddAuthentication(options =>
