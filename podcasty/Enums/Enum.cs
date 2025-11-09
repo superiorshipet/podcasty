@@ -10,7 +10,8 @@
         { Pending, 
         Approved,
         Rejected,
-        Deleted }
+        Deleted,
+        Active}
 
         public enum InteractionType 
         { Like,

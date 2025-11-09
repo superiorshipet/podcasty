@@ -150,3 +150,4 @@ C:\Users\DELL\source\repos\podcasty\podcasty\obj\Debug\net8.0\refint\podcasty.dl
 C:\Users\DELL\source\repos\podcasty\podcasty\obj\Debug\net8.0\podcasty.pdb
 C:\Users\DELL\source\repos\podcasty\podcasty\obj\Debug\net8.0\podcasty.genruntimeconfig.cache
 C:\Users\DELL\source\repos\podcasty\podcasty\obj\Debug\net8.0\ref\podcasty.dll
+C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -14,8 +14,7 @@ namespace podcasty.Models
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
 
-        // Navigation properties
-        public User User { get; set; }
-        public Podcast Podcast { get; set; }
+        public virtual User User { get; set; }
+        public virtual Podcast Podcast { get; set; }
     }
 }

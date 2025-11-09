@@ -11,6 +11,6 @@ namespace podcasty.Models
         public DateTime UpdatedAt { get; set; }
 
         // Navigation properties
-        public ICollection<Podcast> Podcasts { get; set; }
+        public virtual ICollection<Podcast> Podcasts { get; set; }
     }
 }
