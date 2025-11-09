@@ -111,6 +111,15 @@ public class UserInteractionController : ControllerBase
         return Ok();
     }
 
+    [HttpPut("comment/{id}")]
+    public async Task<IActionResult> UpdateComment(int id, [FromBody] EditCommentDto dto)
+    {
+        var success = await _repo.UpdateCommentContent(id, dto.UserId, dto.Content);
+        if (!success) return Forbid("Not authorized or comment not found");
+        return Ok("Comment updated");
+    }
+
+
     // Fetch all for a podcast or user (optional)
     [HttpGet("bypodcast/{podcastId}")]
     public async Task<IActionResult> GetByPodcast(int podcastId) =>

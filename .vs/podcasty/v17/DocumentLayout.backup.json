@@ -101,7 +101,7 @@
               "RelativeDocumentMoniker": "podcasty\\Controllers\\UserInteractionController.cs",
               "ToolTip": "C:\\Users\\DELL\\source\\repos\\podcasty\\podcasty\\Controllers\\UserInteractionController.cs",
               "RelativeToolTip": "podcasty\\Controllers\\UserInteractionController.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAIA6wHEAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAF8AAAAAAAAAAIA6wHUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-07T17:22:44.126Z",
               "EditorCaption": ""
@@ -183,7 +183,6 @@
               "RelativeDocumentMoniker": "podcasty\\Migrations\\20251104195404_InitialCreate.cs",
               "ToolTip": "C:\\Users\\DELL\\source\\repos\\podcasty\\podcasty\\Migrations\\20251104195404_InitialCreate.cs",
               "RelativeToolTip": "podcasty\\Migrations\\20251104195404_InitialCreate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-04T19:54:04.798Z"
             },
@@ -197,7 +196,8 @@
               "RelativeToolTip": "podcasty\\Migrations\\20251104195759_InitialCreate.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAQwBcAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-04T19:57:59.952Z"
+              "WhenOpened": "2025-11-04T19:57:59.952Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -209,7 +209,8 @@
               "RelativeToolTip": "podcasty\\Models\\Podcast.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-04T19:03:12.862Z"
+              "WhenOpened": "2025-11-04T19:03:12.862Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -221,7 +222,8 @@
               "RelativeToolTip": "podcasty\\Models\\PlayHistory.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAxwAsAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-04T19:19:44.117Z"
+              "WhenOpened": "2025-11-04T19:19:44.117Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -233,7 +235,8 @@
               "RelativeToolTip": "podcasty\\Models\\ModerationLog.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-04T19:20:12.932Z"
+              "WhenOpened": "2025-11-04T19:20:12.932Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -245,7 +248,8 @@
               "RelativeToolTip": "podcasty\\Models\\Category.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-04T19:04:02.925Z"
+              "WhenOpened": "2025-11-04T19:04:02.925Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -257,7 +261,8 @@
               "RelativeToolTip": "podcasty\\podcasty.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-04T18:41:21.266Z"
+              "WhenOpened": "2025-11-04T18:41:21.266Z",
+              "EditorCaption": ""
             }
           ]
         }
