@@ -99,12 +99,21 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< Updated upstream
               "Title": "PlayHistoryController.cs",
               "DocumentMoniker": "C:\\Users\\CM\\source\\repos\\podcasty\\podcasty\\Controllers\\PlayHistoryController.cs",
               "RelativeDocumentMoniker": "podcasty\\Controllers\\PlayHistoryController.cs",
               "ToolTip": "C:\\Users\\CM\\source\\repos\\podcasty\\podcasty\\Controllers\\PlayHistoryController.cs",
               "RelativeToolTip": "podcasty\\Controllers\\PlayHistoryController.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAQwBQAAAAZAAAAAAAAAA==",
+=======
+              "Title": "UserInteractionController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\podcasty\\podcasty\\Controllers\\UserInteractionController.cs",
+              "RelativeDocumentMoniker": "podcasty\\Controllers\\UserInteractionController.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\podcasty\\podcasty\\Controllers\\UserInteractionController.cs",
+              "RelativeToolTip": "podcasty\\Controllers\\UserInteractionController.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAIA6wHUAAAAAAAAAAAAAAA==",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-07T23:16:04.543Z",
               "EditorCaption": ""
@@ -188,6 +197,24 @@
               "EditorCaption": ""
             },
             {
+<<<<<<< Updated upstream
+=======
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "20251104195404_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\podcasty\\podcasty\\Migrations\\20251104195404_InitialCreate.cs",
+              "RelativeDocumentMoniker": "podcasty\\Migrations\\20251104195404_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\podcasty\\podcasty\\Migrations\\20251104195404_InitialCreate.cs",
+              "RelativeToolTip": "podcasty\\Migrations\\20251104195404_InitialCreate.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T19:54:04.798Z"
+            },
+            {
+>>>>>>> Stashed changes
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "RegisterDto.cs",
@@ -197,6 +224,7 @@
               "RelativeToolTip": "podcasty\\Dtos\\RegisterDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< Updated upstream
               "WhenOpened": "2025-11-06T12:20:47.141Z",
               "EditorCaption": ""
             },
@@ -211,6 +239,9 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-08T00:13:24.442Z",
+=======
+              "WhenOpened": "2025-11-04T19:57:59.952Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             },
             {
@@ -223,7 +254,11 @@
               "RelativeToolTip": "podcasty\\Models\\PlayHistory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< Updated upstream
               "WhenOpened": "2025-11-08T01:50:21.183Z",
+=======
+              "WhenOpened": "2025-11-04T19:03:12.862Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             },
             {
@@ -236,7 +271,11 @@
               "RelativeToolTip": "podcasty\\Migrations\\20251104195759_InitialCreate.cs",
               "ViewState": "AgIAAFoBAAAAAAAAAAAmwF0BAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< Updated upstream
               "WhenOpened": "2025-11-08T01:56:27.177Z",
+=======
+              "WhenOpened": "2025-11-04T19:19:44.117Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             },
             {
@@ -249,7 +288,11 @@
               "RelativeToolTip": "podcasty\\Migrations\\20251107224101_kero.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< Updated upstream
               "WhenOpened": "2025-11-08T01:56:22.311Z",
+=======
+              "WhenOpened": "2025-11-04T19:20:12.932Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             },
             {
@@ -262,12 +305,17 @@
               "RelativeToolTip": "podcasty\\Models\\Podcast.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAIwBgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< Updated upstream
               "WhenOpened": "2025-11-08T01:50:18.26Z",
+=======
+              "WhenOpened": "2025-11-04T19:04:02.925Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
+<<<<<<< Updated upstream
               "Title": "Episode.cs",
               "DocumentMoniker": "C:\\Users\\CM\\source\\repos\\podcasty\\podcasty\\Models\\Episode.cs",
               "RelativeDocumentMoniker": "podcasty\\Models\\Episode.cs",
@@ -363,6 +411,17 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-06T08:23:37.59Z"
+=======
+              "Title": "podcasty.csproj",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\podcasty\\podcasty\\podcasty.csproj",
+              "RelativeDocumentMoniker": "podcasty\\podcasty.csproj",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\podcasty\\podcasty\\podcasty.csproj",
+              "RelativeToolTip": "podcasty\\podcasty.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-04T18:41:21.266Z",
+              "EditorCaption": ""
+>>>>>>> Stashed changes
             }
           ]
         }
