@@ -16,21 +16,22 @@ namespace podcasty.Controllers
         public PodcastsController(IPodcastRepository repo) => _repo = repo;
 
         [HttpPost]
-
+        [Authorize]
         public async Task<IActionResult> Create([FromBody] PodcastCreateDto dto)
         {
             var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+
             var podcast = new Podcast
             {
                 Title = dto.Title,
                 Description = dto.Description,
-                CreatorId = dto.CreatorId,
                 CategoryId = dto.CategoryId,
                 CoverImage = dto.CoverImage,
-                Status = Enums.PodcastStatus.Active // or Default
+                CreatorId = userId // server sets the creator!
             };
-            var created = await _repo.AddAsync(podcast);
-            return Ok(created);
+
+            await _repo.AddAsync(podcast);
+            return Ok(podcast); // or return Created, etc.
         }
 
         [HttpGet("{id}")]

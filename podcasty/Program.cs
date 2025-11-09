@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using podcasty.Interfaces;
 using podcasty.Models;
 using podcasty.Repos;
@@ -24,6 +25,8 @@ internal class Program
         builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("CS")));
         builder.Services.AddIdentity<User, IdentityRole<int>>().AddEntityFrameworkStores<AppDbContext>();
         builder.Services.AddScoped<IUserInteractionRepository, UserInteractionRepository>();
+        builder.Services.AddScoped<IPodcastRepository, PodcastRepository>();
+        builder.Services.AddScoped<IEpisodeRepository, EpisodeRepository>();
         builder.Services.AddScoped<AppDbContext>();
 
         builder.Services.AddAuthentication(options =>
@@ -60,6 +63,40 @@ internal class Program
                 builder.AllowAnyMethod();
                 builder.AllowAnyHeader();
             });
+        });
+        builder.Services.AddSwaggerGen(c =>
+        {
+            c.SwaggerDoc("v1", new OpenApiInfo { Title = "podcasty", Version = "v1" });
+
+            // Add JWT Authentication
+            c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+            {
+                Description = @"JWT Authorization header using the Bearer scheme. \r\n\r\n 
+          Enter 'Bearer' [space] and then your token in the text input below.
+          Example: 'Bearer 12345abcdef'",
+                Name = "Authorization",
+                In = ParameterLocation.Header,
+                Type = SecuritySchemeType.ApiKey,
+                Scheme = "Bearer"
+            });
+
+            c.AddSecurityRequirement(new OpenApiSecurityRequirement()
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                },
+                Scheme = "oauth2",
+                Name = "Bearer",
+                In = ParameterLocation.Header,
+            },
+            new List<string>()
+        }
+    });
         });
         var app = builder.Build();
 

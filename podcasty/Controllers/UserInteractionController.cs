@@ -120,7 +120,7 @@ public class UserInteractionController : ControllerBase
     {
         int userId = GetUserId();
         var success = await _repo.UpdateCommentContent(id, userId, dto.Content);
-        if (!success) return Forbid("Not authorized or comment not found");
+        if (!success) return NotFound("Not authorized or comment not found");
         return Ok("Comment updated");
     }
 
@@ -131,7 +131,7 @@ public class UserInteractionController : ControllerBase
         var interaction = await _repo.GetInteractionByIdAsync(id);
         if (interaction == null) return NotFound();
         if (interaction.UserId != userId)
-            return Forbid("Not authorized to delete this comment.");
+            return NotFound("Not authorized to delete this comment.");
         var ok = await _repo.DeleteAsync(id);
         return ok ? Ok("deleted") : NotFound();
     }
