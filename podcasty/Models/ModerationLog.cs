@@ -13,6 +13,6 @@ public class ModerationLog
     public string Reason { get; set; }
     public DateTime ActionDate { get; set; }
 
-    public User Admin { get; set; }
-    public Podcast Podcast { get; set; }
+    public virtual User Admin { get; set; }
+    public virtual Podcast Podcast { get; set; }
 }

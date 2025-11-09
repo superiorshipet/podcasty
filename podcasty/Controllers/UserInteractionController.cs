@@ -4,31 +4,35 @@ using podcasty.Enums;
 using podcasty.Interfaces;
 using podcasty.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 [ApiController]
 [Route("api/[controller]")]
+[Authorize]
 public class UserInteractionController : ControllerBase
 {
     private readonly IUserInteractionRepository _repo;
     private readonly AppDbContext _db;
 
-    public UserInteractionController(IUserInteractionRepository repo,AppDbContext db)
+    public UserInteractionController(IUserInteractionRepository repo, AppDbContext db)
     {
         _repo = repo;
         _db = db;
-
     }
+
+    private int GetUserId() =>
+        int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
 
     [HttpPost("like")]
     public async Task<IActionResult> Like([FromBody] UserPodcastInteractionDto dto)
     {
-        var userExists = await _db.Users.AnyAsync(u => u.Id == dto.UserId);
+        int userId = GetUserId();
         var podcastExists = await _db.Podcasts.AnyAsync(p => p.PodcastId == dto.PodcastId);
-        if (!userExists || !podcastExists) return BadRequest("User or podcast does not exist.");
-
+        if (!podcastExists) return BadRequest("Podcast does not exist.");
         var interaction = new UserInteraction
         {
-            UserId = dto.UserId,
+            UserId = userId,
             PodcastId = dto.PodcastId,
             Interaction = InteractionType.Like,
             CreatedAt = DateTime.UtcNow,
@@ -41,12 +45,12 @@ public class UserInteractionController : ControllerBase
     [HttpPost("dislike")]
     public async Task<IActionResult> Dislike([FromBody] UserPodcastInteractionDto dto)
     {
-        var userExists = await _db.Users.AnyAsync(u => u.Id == dto.UserId);
+        int userId = GetUserId();
         var podcastExists = await _db.Podcasts.AnyAsync(p => p.PodcastId == dto.PodcastId);
-        if (!userExists || !podcastExists) return BadRequest("User or podcast does not exist.");
+        if (!podcastExists) return BadRequest("Podcast does not exist.");
         var interaction = new UserInteraction
         {
-            UserId = dto.UserId,
+            UserId = userId,
             PodcastId = dto.PodcastId,
             Interaction = InteractionType.Dislike,
             CreatedAt = DateTime.UtcNow,
@@ -59,12 +63,12 @@ public class UserInteractionController : ControllerBase
     [HttpPost("favorite")]
     public async Task<IActionResult> Favorite([FromBody] UserPodcastInteractionDto dto)
     {
-        var userExists = await _db.Users.AnyAsync(u => u.Id == dto.UserId);
+        int userId = GetUserId();
         var podcastExists = await _db.Podcasts.AnyAsync(p => p.PodcastId == dto.PodcastId);
-        if (!userExists || !podcastExists) return BadRequest("User or podcast does not exist.");
+        if (!podcastExists) return BadRequest("Podcast does not exist.");
         var interaction = new UserInteraction
         {
-            UserId = dto.UserId,
+            UserId = userId,
             PodcastId = dto.PodcastId,
             Interaction = InteractionType.Favorite,
             CreatedAt = DateTime.UtcNow,
@@ -77,12 +81,12 @@ public class UserInteractionController : ControllerBase
     [HttpPost("follow")]
     public async Task<IActionResult> Follow([FromBody] UserPodcastInteractionDto dto)
     {
-        var userExists = await _db.Users.AnyAsync(u => u.Id == dto.UserId);
+        int userId = GetUserId();
         var podcastExists = await _db.Podcasts.AnyAsync(p => p.PodcastId == dto.PodcastId);
-        if (!userExists || !podcastExists) return BadRequest("User or podcast does not exist.");
+        if (!podcastExists) return BadRequest("Podcast does not exist.");
         var interaction = new UserInteraction
         {
-            UserId = dto.UserId,
+            UserId = userId,
             PodcastId = dto.PodcastId,
             Interaction = InteractionType.Follow,
             CreatedAt = DateTime.UtcNow,
@@ -95,12 +99,12 @@ public class UserInteractionController : ControllerBase
     [HttpPost("comment")]
     public async Task<IActionResult> Comment([FromBody] CommentInputDto dto)
     {
-        var userExists = await _db.Users.AnyAsync(u => u.Id == dto.UserId);
+        int userId = GetUserId();
         var podcastExists = await _db.Podcasts.AnyAsync(p => p.PodcastId == dto.PodcastId);
-        if (!userExists || !podcastExists) return BadRequest("User or podcast does not exist.");
+        if (!podcastExists) return BadRequest("Podcast does not exist.");
         var interaction = new UserInteraction
         {
-            UserId = dto.UserId,
+            UserId = userId,
             PodcastId = dto.PodcastId,
             Interaction = InteractionType.Comment,
             CommentContent = dto.Content,
@@ -114,18 +118,32 @@ public class UserInteractionController : ControllerBase
     [HttpPut("comment/{id}")]
     public async Task<IActionResult> UpdateComment(int id, [FromBody] EditCommentDto dto)
     {
-        var success = await _repo.UpdateCommentContent(id, dto.UserId, dto.Content);
+        int userId = GetUserId();
+        var success = await _repo.UpdateCommentContent(id, userId, dto.Content);
         if (!success) return Forbid("Not authorized or comment not found");
         return Ok("Comment updated");
     }
 
+    [HttpDelete("comment/{id}")]
+    public async Task<IActionResult> DeleteComment(int id)
+    {
+        int userId = GetUserId();
+        var interaction = await _repo.GetInteractionByIdAsync(id);
+        if (interaction == null) return NotFound();
+        if (interaction.UserId != userId)
+            return Forbid("Not authorized to delete this comment.");
+        var ok = await _repo.DeleteAsync(id);
+        return ok ? Ok("deleted") : NotFound();
+    }
 
-    // Fetch all for a podcast or user (optional)
     [HttpGet("bypodcast/{podcastId}")]
     public async Task<IActionResult> GetByPodcast(int podcastId) =>
         Ok(await _repo.GetByPodcastAsync(podcastId));
 
-    [HttpGet("byuser/{userId}")]
-    public async Task<IActionResult> GetByUser(int userId) =>
-        Ok(await _repo.GetByUserAsync(userId));
+    [HttpGet("byuser")]
+    public async Task<IActionResult> GetByUser()
+    {
+        int userId = GetUserId();
+        return Ok(await _repo.GetByUserAsync(userId));
+    }
 }

@@ -12,7 +12,7 @@ namespace podcasty.Models
         public bool Completed { get; set; }
         public DateTime LastPlayed { get; set; }
 
-        public User User { get; set; }
-        public Episode Episode { get; set; }
+        public virtual User User { get; set; }
+        public virtual Episode Episode { get; set; }
     }
 }

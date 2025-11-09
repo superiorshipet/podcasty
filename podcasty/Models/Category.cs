@@ -9,6 +9,6 @@ namespace podcasty.Models
         public string Name { get; set; }
         public string? Icon { get; set; }
 
-        public ICollection<Podcast> Podcasts { get; set; }
+        public virtual ICollection<Podcast> Podcasts { get; set; }
     }
 }

@@ -9,16 +9,17 @@ namespace podcasty.Models
         public int PodcastId { get; set; }
         public int CreatorId { get; set; }
         public int CategoryId { get; set; }
+        [Required]
         public string Title { get; set; }
         public string Description { get; set; }
-        public string CoverImage { get; set; }
+        public string? CoverImage { get; set; }
         public PodcastStatus Status { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public DateTime CreatedAt { get; set; }=  DateTime.UtcNow;
+        public DateTime UpdatedAt { get; set; }= DateTime.UtcNow;
 
         // Navigation properties
-        public User Creator { get; set; }
-        public Category Category { get; set; }
-        public ICollection<Episode> Episodes { get; set; }
+        public virtual User Creator { get; set; }
+        public virtual Category Category { get; set; }
+        public virtual ICollection<Episode> Episodes { get; set; }
     }
 }

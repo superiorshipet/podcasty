@@ -1,10 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using podcasty.Enums;
 using podcasty.Interfaces;
 using podcasty.Models;
 
 namespace podcasty.Repos
 {
-    public class UserInteractionrepo(AppDbContext db) : IUserInteractionRepository
+    public class UserInteractionRepository(AppDbContext db) : IUserInteractionRepository
     {
         private readonly AppDbContext _db = db;
 
@@ -20,6 +21,10 @@ namespace podcasty.Repos
             await _db.SaveChangesAsync();
             return interaction;
         }
+        public async Task<UserInteraction> GetInteractionByIdAsync(int id)
+        {
+            return await _db.UserInteractions.FindAsync(id);
+        }
 
         public async Task<bool> DeleteAsync(int id)
         {
@@ -29,5 +34,21 @@ namespace podcasty.Repos
             await _db.SaveChangesAsync();
             return true;
         }
+        public async Task<bool> UpdateCommentContent(int interactionId, int userId, string newContent)
+        {
+            var comment = await _db.UserInteractions
+                .FirstOrDefaultAsync(ui =>
+                    ui.InteractionId == interactionId &&
+                    ui.Interaction == InteractionType.Comment &&
+                    ui.UserId == userId);
+
+            if (comment == null) return false;
+
+            comment.CommentContent = newContent;
+            comment.UpdatedAt = DateTime.UtcNow;
+            await _db.SaveChangesAsync();
+            return true;
+        }
+
     }
 }
