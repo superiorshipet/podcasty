@@ -6,6 +6,7 @@ namespace podcasty.Models
     {
         [Key]
         public int CategoryId { get; set; }
+        [Required]
         public string Name { get; set; }
         public string? Icon { get; set; }
 
