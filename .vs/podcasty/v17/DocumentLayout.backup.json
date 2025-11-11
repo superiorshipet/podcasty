@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\DELL\\source\\repos\\podcasty\\",
+  "WorkspaceRootPath": "C:\\Users\\CM\\source\\repos\\podcasty\\",
   "Documents": [
     {
       "AbsoluteMoniker": "D:0:0:{F2D826A0-E75F-4260-9FDA-6EAB2531FD85}|podcasty\\podcasty.csproj|c:\\users\\dell\\source\\repos\\podcasty\\podcasty\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -11,8 +11,8 @@
       "RelativeMoniker": "D:0:0:{F2D826A0-E75F-4260-9FDA-6EAB2531FD85}|podcasty\\podcasty.csproj|solutionrelative:podcasty\\controllers\\podcastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2D826A0-E75F-4260-9FDA-6EAB2531FD85}|podcasty\\podcasty.csproj|c:\\users\\dell\\source\\repos\\podcasty\\podcasty\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2D826A0-E75F-4260-9FDA-6EAB2531FD85}|podcasty\\podcasty.csproj|solutionrelative:podcasty\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F2D826A0-E75F-4260-9FDA-6EAB2531FD85}|podcasty\\podcasty.csproj|c:\\users\\cm\\source\\repos\\podcasty\\podcasty\\repos\\userinteractionrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2D826A0-E75F-4260-9FDA-6EAB2531FD85}|podcasty\\podcasty.csproj|solutionrelative:podcasty\\repos\\userinteractionrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F2D826A0-E75F-4260-9FDA-6EAB2531FD85}|podcasty\\podcasty.csproj|c:\\users\\dell\\source\\repos\\podcasty\\podcasty\\dtos\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -134,6 +134,8 @@
               "EditorCaption": ""
             },
             {
+<<<<<<< Updated upstream
+=======
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
@@ -150,6 +152,7 @@
               "WhenOpened": "2025-11-06T14:17:34.845Z"
             },
             {
+>>>>>>> Stashed changes
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "LoginDto.cs",
