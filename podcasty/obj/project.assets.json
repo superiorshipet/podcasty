@@ -4224,23 +4224,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DELL\\.nuget\\packages\\": {},
+    "C:\\Users\\CM\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\podcasty\\podcasty\\podcasty.csproj",
+      "projectUniqueName": "C:\\Users\\CM\\source\\repos\\podcasty\\podcasty\\podcasty.csproj",
       "projectName": "podcasty",
-      "projectPath": "C:\\Users\\DELL\\source\\repos\\podcasty\\podcasty\\podcasty.csproj",
-      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DELL\\source\\repos\\podcasty\\podcasty\\obj\\",
+      "projectPath": "C:\\Users\\CM\\source\\repos\\podcasty\\podcasty\\podcasty.csproj",
+      "packagesPath": "C:\\Users\\CM\\.nuget\\packages\\",
+<<<<<<< Updated upstream
+      "outputPath": "C:\\Users\\CM\\Source\\Repos\\podcasty\\podcasty\\obj\\",
+=======
+      "outputPath": "C:\\Users\\CM\\source\\repos\\podcasty\\podcasty\\obj\\",
+>>>>>>> Stashed changes
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\CM\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
