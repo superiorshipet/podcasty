@@ -28,6 +28,7 @@ internal class Program
         builder.Services.AddScoped<IPodcastRepository, PodcastRepository>();
         builder.Services.AddScoped<IEpisodeRepository, EpisodeRepository>();
         builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+        builder.Services.AddScoped < IPlayHistoryRepository, PlayHistoryRepository>();
         builder.Services.AddScoped<AppDbContext>();
 
         builder.Services.AddAuthentication(options =>
