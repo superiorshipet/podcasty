@@ -13,6 +13,7 @@ namespace podcasty.Controllers
     public class PodcastsController : ControllerBase
     {
         private readonly IPodcastRepository _repo;
+        private readonly ICategoryRepository _categoryRepo;
         public PodcastsController(IPodcastRepository repo) => _repo = repo;
 
         [HttpPost]
@@ -20,7 +21,9 @@ namespace podcasty.Controllers
         public async Task<IActionResult> Create([FromBody] PodcastCreateDto dto)
         {
             var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
-
+            var categoryExists = await _categoryRepo.ExistsAsync(dto.CategoryId);
+            if (!categoryExists)
+                return BadRequest("Invalid CategoryId: The category does not exist.");
             var podcast = new Podcast
             {
                 Title = dto.Title,
