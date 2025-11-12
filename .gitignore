@@ -1,5 +1,53 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
+**/.classpath
+**/.dockerignore
+**/.env
+**/.git
+**/.gitignore
+**/.project
+**/.settings
+**/.toolstarget
+**/.vs
+**/.vscode
+**/*.*proj.user
+**/*.dbmdl
+**/*.jfm
+**/azds.yaml
+**/bin
+**/charts
+**/docker-compose*
+**/Dockerfile*
+**/node_modules
+**/npm-debug.log
+**/obj
+**/secrets.dev.yaml
+**/values.dev.yaml
+LICENSE
+README.md
+!**/.gitignore
+!.git/HEAD
+!.git/config
+!.git/packed-refs
+!.git/refs/heads/**
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
 
-/.vs/podcasty/FileContentIndex/483a7ca4-1463-47bf-b741-0f948eaa4eb8.vsidx
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# VS Code directories
+.vscode/
+
+# Visual Studio cache files
+.vs/
+*.cache
+*.pdb
+*.dll
+*.exe
