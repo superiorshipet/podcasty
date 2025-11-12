@@ -29,6 +29,7 @@ internal class Program
         builder.Services.AddScoped<IEpisodeRepository, EpisodeRepository>();
         builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
         builder.Services.AddScoped < IPlayHistoryRepository, PlayHistoryRepository>();
+        builder.Services.AddScoped<IUserRepository, UserRepository>();
         builder.Services.AddScoped<AppDbContext>();
         builder.Services.AddScoped<ISearchRepository, SearchRepository>();
 
