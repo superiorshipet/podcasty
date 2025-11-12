@@ -5,7 +5,10 @@ namespace podcasty.Models
 {
     public class User : IdentityUser<int>
     {
+
         public string? ProfilePicture { get; set; }
+
+        public string? Bio { get; set; }
         public UserRole Role { get; set; } // "user", "creator", "admin"
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
