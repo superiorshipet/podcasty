@@ -30,6 +30,7 @@ internal class Program
         builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
         builder.Services.AddScoped < IPlayHistoryRepository, PlayHistoryRepository>();
         builder.Services.AddScoped<AppDbContext>();
+        builder.Services.AddScoped<ISearchRepository, SearchRepository>();
 
         builder.Services.AddAuthentication(options =>
         {
