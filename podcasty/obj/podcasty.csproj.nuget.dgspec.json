@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Abdel naby\\Desktop\\DEPI\\podcasty\\podcasty\\podcasty.csproj": {}
+    "C:\\Users\\DELL\\source\\repos\\podcasty\\podcasty\\podcasty.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Abdel naby\\Desktop\\DEPI\\podcasty\\podcasty\\podcasty.csproj": {
+    "C:\\Users\\DELL\\source\\repos\\podcasty\\podcasty\\podcasty.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Abdel naby\\Desktop\\DEPI\\podcasty\\podcasty\\podcasty.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\podcasty\\podcasty\\podcasty.csproj",
         "projectName": "podcasty",
-        "projectPath": "C:\\Users\\Abdel naby\\Desktop\\DEPI\\podcasty\\podcasty\\podcasty.csproj",
-        "packagesPath": "C:\\Users\\Abdel naby\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Abdel naby\\Desktop\\DEPI\\podcasty\\podcasty\\obj\\",
+        "projectPath": "C:\\Users\\DELL\\source\\repos\\podcasty\\podcasty\\podcasty.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DELL\\source\\repos\\podcasty\\podcasty\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "P:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Abdel naby\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -72,6 +72,10 @@
               "target": "Package",
               "version": "[8.0.21, )"
             },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[8.14.0, )"
+            },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.22.1, )"
@@ -92,28 +96,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.22, 8.0.22]"
-            },
-            {
-              "name": "Microsoft.Net.Sdk.Compilers.Toolset",
-              "version": "[9.0.307, 9.0.307]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.22, 8.0.22]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.22, 8.0.22]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.22, 8.0.22]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -122,7 +104,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
