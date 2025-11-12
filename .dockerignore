@@ -28,3 +28,26 @@ README.md
 !.git/config
 !.git/packed-refs
 !.git/refs/heads/**
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# VS Code directories
+.vscode/
+
+# Visual Studio cache files
+.vs/
+*.cache
+*.pdb
+*.dll
+*.exe
