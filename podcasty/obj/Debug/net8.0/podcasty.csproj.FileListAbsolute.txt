@@ -1,463 +1,153 @@
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\appsettings.Development.json
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\appsettings.json
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\podcasty.staticwebassets.endpoints.json
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\podcasty.exe
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\podcasty.deps.json
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\podcasty.runtimeconfig.json
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\podcasty.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\podcasty.pdb
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Azure.Core.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Azure.Identity.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Humanizer.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Identity.Client.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.OpenApi.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Mono.TextTemplating.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\System.ClientModel.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\System.CodeDom.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\System.Composition.AttributedModel.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\System.Composition.Convention.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\System.Composition.Hosting.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\System.Composition.Runtime.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\System.Composition.TypedParts.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\System.Drawing.Common.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\System.Memory.Data.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\System.Runtime.Caching.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\System.Security.Permissions.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\System.Windows.Extensions.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\obj\Debug\net8.0\podcasty.csproj.AssemblyReference.cache
-C:\Users\DELL\source\repos\podcasty\podcasty\obj\Debug\net8.0\rpswa.dswa.cache.json
-C:\Users\DELL\source\repos\podcasty\podcasty\obj\Debug\net8.0\podcasty.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\DELL\source\repos\podcasty\podcasty\obj\Debug\net8.0\podcasty.AssemblyInfoInputs.cache
-C:\Users\DELL\source\repos\podcasty\podcasty\obj\Debug\net8.0\podcasty.AssemblyInfo.cs
-C:\Users\DELL\source\repos\podcasty\podcasty\obj\Debug\net8.0\podcasty.csproj.CoreCompileInputs.cache
-C:\Users\DELL\source\repos\podcasty\podcasty\obj\Debug\net8.0\podcasty.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\DELL\source\repos\podcasty\podcasty\obj\Debug\net8.0\podcasty.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\DELL\source\repos\podcasty\podcasty\obj\Debug\net8.0\podcasty.sourcelink.json
-C:\Users\DELL\source\repos\podcasty\podcasty\obj\Debug\net8.0\rjimswa.dswa.cache.json
-C:\Users\DELL\source\repos\podcasty\podcasty\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
-C:\Users\DELL\source\repos\podcasty\podcasty\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
-C:\Users\DELL\source\repos\podcasty\podcasty\obj\Debug\net8.0\scopedcss\bundle\podcasty.styles.css
-C:\Users\DELL\source\repos\podcasty\podcasty\obj\Debug\net8.0\staticwebassets.build.json
-C:\Users\DELL\source\repos\podcasty\podcasty\obj\Debug\net8.0\staticwebassets.build.json.cache
-C:\Users\DELL\source\repos\podcasty\podcasty\obj\Debug\net8.0\staticwebassets.development.json
-C:\Users\DELL\source\repos\podcasty\podcasty\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\DELL\source\repos\podcasty\podcasty\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
-C:\Users\DELL\source\repos\podcasty\podcasty\obj\Debug\net8.0\podcasty.csproj.Up2Date
-C:\Users\DELL\source\repos\podcasty\podcasty\obj\Debug\net8.0\podcasty.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\obj\Debug\net8.0\refint\podcasty.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\obj\Debug\net8.0\podcasty.pdb
-C:\Users\DELL\source\repos\podcasty\podcasty\obj\Debug\net8.0\podcasty.genruntimeconfig.cache
-C:\Users\DELL\source\repos\podcasty\podcasty\obj\Debug\net8.0\ref\podcasty.dll
-C:\Users\DELL\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-<<<<<<< HEAD
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\appsettings.Development.json
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\appsettings.json
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\podcasty.staticwebassets.endpoints.json
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\podcasty.exe
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\podcasty.deps.json
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\podcasty.runtimeconfig.json
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\podcasty.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\podcasty.pdb
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Azure.Core.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Azure.Identity.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Humanizer.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Identity.Client.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.OpenApi.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Mono.TextTemplating.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\System.ClientModel.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\System.CodeDom.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\System.Composition.AttributedModel.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\System.Composition.Convention.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\System.Composition.Hosting.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\System.Composition.Runtime.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\System.Composition.TypedParts.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\System.Drawing.Common.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\System.Memory.Data.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\System.Runtime.Caching.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\System.Security.Permissions.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\System.Windows.Extensions.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\obj\Debug\net8.0\podcasty.csproj.AssemblyReference.cache
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\obj\Debug\net8.0\rpswa.dswa.cache.json
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\obj\Debug\net8.0\podcasty.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\obj\Debug\net8.0\podcasty.AssemblyInfoInputs.cache
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\obj\Debug\net8.0\podcasty.AssemblyInfo.cs
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\obj\Debug\net8.0\podcasty.csproj.CoreCompileInputs.cache
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\obj\Debug\net8.0\podcasty.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\obj\Debug\net8.0\podcasty.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\obj\Debug\net8.0\podcasty.sourcelink.json
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\obj\Debug\net8.0\rjimswa.dswa.cache.json
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\obj\Debug\net8.0\scopedcss\bundle\podcasty.styles.css
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\obj\Debug\net8.0\staticwebassets.build.json
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\obj\Debug\net8.0\staticwebassets.build.json.cache
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\obj\Debug\net8.0\staticwebassets.development.json
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\obj\Debug\net8.0\podcasty.csproj.Up2Date
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\obj\Debug\net8.0\podcasty.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\obj\Debug\net8.0\refint\podcasty.dll
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\obj\Debug\net8.0\podcasty.pdb
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\obj\Debug\net8.0\podcasty.genruntimeconfig.cache
-C:\Users\Abdel naby\Desktop\DEPI\podcasty\podcasty\obj\Debug\net8.0\ref\podcasty.dll
-=======
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\appsettings.Development.json
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\appsettings.json
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\podcasty.staticwebassets.endpoints.json
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\podcasty.exe
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\podcasty.deps.json
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\podcasty.runtimeconfig.json
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\podcasty.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\podcasty.pdb
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Azure.Core.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Azure.Identity.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Humanizer.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Identity.Client.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.OpenApi.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Mono.TextTemplating.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\System.ClientModel.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\System.CodeDom.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\System.Composition.AttributedModel.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\System.Composition.Convention.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\System.Composition.Hosting.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\System.Composition.Runtime.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\System.Composition.TypedParts.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\System.Drawing.Common.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\System.Memory.Data.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\System.Runtime.Caching.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\System.Security.Permissions.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\System.Windows.Extensions.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\obj\Debug\net8.0\podcasty.csproj.AssemblyReference.cache
-D:\DEPI_3\podcasty1\podcasty\podcasty\obj\Debug\net8.0\podcasty.GeneratedMSBuildEditorConfig.editorconfig
-D:\DEPI_3\podcasty1\podcasty\podcasty\obj\Debug\net8.0\podcasty.AssemblyInfoInputs.cache
-D:\DEPI_3\podcasty1\podcasty\podcasty\obj\Debug\net8.0\podcasty.AssemblyInfo.cs
-D:\DEPI_3\podcasty1\podcasty\podcasty\obj\Debug\net8.0\podcasty.csproj.CoreCompileInputs.cache
-D:\DEPI_3\podcasty1\podcasty\podcasty\obj\Debug\net8.0\podcasty.MvcApplicationPartsAssemblyInfo.cs
-D:\DEPI_3\podcasty1\podcasty\podcasty\obj\Debug\net8.0\podcasty.MvcApplicationPartsAssemblyInfo.cache
-D:\DEPI_3\podcasty1\podcasty\podcasty\obj\Debug\net8.0\podcasty.sourcelink.json
-D:\DEPI_3\podcasty1\podcasty\podcasty\obj\Debug\net8.0\scopedcss\bundle\podcasty.styles.css
-D:\DEPI_3\podcasty1\podcasty\podcasty\obj\Debug\net8.0\staticwebassets.build.json
-D:\DEPI_3\podcasty1\podcasty\podcasty\obj\Debug\net8.0\staticwebassets.development.json
-D:\DEPI_3\podcasty1\podcasty\podcasty\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-D:\DEPI_3\podcasty1\podcasty\podcasty\obj\Debug\net8.0\staticwebassets\msbuild.podcasty.Microsoft.AspNetCore.StaticWebAssets.props
-D:\DEPI_3\podcasty1\podcasty\podcasty\obj\Debug\net8.0\staticwebassets\msbuild.podcasty.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-D:\DEPI_3\podcasty1\podcasty\podcasty\obj\Debug\net8.0\staticwebassets\msbuild.build.podcasty.props
-D:\DEPI_3\podcasty1\podcasty\podcasty\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.podcasty.props
-D:\DEPI_3\podcasty1\podcasty\podcasty\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.podcasty.props
-D:\DEPI_3\podcasty1\podcasty\podcasty\obj\Debug\net8.0\staticwebassets.pack.json
-D:\DEPI_3\podcasty1\podcasty\podcasty\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
-D:\DEPI_3\podcasty1\podcasty\podcasty\obj\Debug\net8.0\podcasty.csproj.Up2Date
-D:\DEPI_3\podcasty1\podcasty\podcasty\obj\Debug\net8.0\podcasty.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\obj\Debug\net8.0\refint\podcasty.dll
-D:\DEPI_3\podcasty1\podcasty\podcasty\obj\Debug\net8.0\podcasty.pdb
-D:\DEPI_3\podcasty1\podcasty\podcasty\obj\Debug\net8.0\podcasty.genruntimeconfig.cache
-D:\DEPI_3\podcasty1\podcasty\podcasty\obj\Debug\net8.0\ref\podcasty.dll
->>>>>>> 45245a0a6cca241d1c5ce6f8a975fa13d27dc339
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\appsettings.json
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\podcasty.staticwebassets.endpoints.json
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\podcasty.exe
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\podcasty.deps.json
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\podcasty.runtimeconfig.json
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\podcasty.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\podcasty.pdb
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Azure.Core.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Humanizer.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\System.ClientModel.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\System.CodeDom.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\System.Composition.Convention.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\System.Composition.Hosting.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\System.Composition.Runtime.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\System.Composition.TypedParts.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\System.Memory.Data.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\System.Runtime.Caching.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\CM\source\repos\podcasty\podcasty\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\CM\source\repos\podcasty\podcasty\obj\Debug\net8.0\podcasty.csproj.AssemblyReference.cache
+C:\Users\CM\source\repos\podcasty\podcasty\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\CM\source\repos\podcasty\podcasty\obj\Debug\net8.0\podcasty.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CM\source\repos\podcasty\podcasty\obj\Debug\net8.0\podcasty.AssemblyInfoInputs.cache
+C:\Users\CM\source\repos\podcasty\podcasty\obj\Debug\net8.0\podcasty.AssemblyInfo.cs
+C:\Users\CM\source\repos\podcasty\podcasty\obj\Debug\net8.0\podcasty.csproj.CoreCompileInputs.cache
+C:\Users\CM\source\repos\podcasty\podcasty\obj\Debug\net8.0\podcasty.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\CM\source\repos\podcasty\podcasty\obj\Debug\net8.0\podcasty.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\CM\source\repos\podcasty\podcasty\obj\Debug\net8.0\podcasty.sourcelink.json
+C:\Users\CM\source\repos\podcasty\podcasty\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\CM\source\repos\podcasty\podcasty\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\CM\source\repos\podcasty\podcasty\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\CM\source\repos\podcasty\podcasty\obj\Debug\net8.0\scopedcss\bundle\podcasty.styles.css
+C:\Users\CM\source\repos\podcasty\podcasty\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\CM\source\repos\podcasty\podcasty\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\CM\source\repos\podcasty\podcasty\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\CM\source\repos\podcasty\podcasty\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\CM\source\repos\podcasty\podcasty\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\CM\source\repos\podcasty\podcasty\obj\Debug\net8.0\podcasty.csproj.Up2Date
+C:\Users\CM\source\repos\podcasty\podcasty\obj\Debug\net8.0\podcasty.dll
+C:\Users\CM\source\repos\podcasty\podcasty\obj\Debug\net8.0\refint\podcasty.dll
+C:\Users\CM\source\repos\podcasty\podcasty\obj\Debug\net8.0\podcasty.pdb
+C:\Users\CM\source\repos\podcasty\podcasty\obj\Debug\net8.0\podcasty.genruntimeconfig.cache
+C:\Users\CM\source\repos\podcasty\podcasty\obj\Debug\net8.0\ref\podcasty.dll
