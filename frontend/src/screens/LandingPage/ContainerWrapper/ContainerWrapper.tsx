@@ -1,143 +1,100 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { Podcast } from "../../../types";
+import { useAuth } from "../../../contexts/AuthContext"; 
+
+// (Popular Podcasts Section) - Refactored for API, Polish, & Guest Mode
+
+const PodcastCardSmall = ({ podcast }: { podcast: Podcast }) => {
+  const navigate = useNavigate();
+  const { user, openLoginModal } = useAuth(); 
+
+  const handleClick = () => {
+    if (!user) {
+      openLoginModal(); 
+    } else {
+      navigate(`/podcast/${podcast.id}`);
+    }
+  };
+
+  return (
+    <article
+      onClick={handleClick}
+      className="flex flex-col w-full h-[270px] items-start gap-4 bg-white rounded-[14px] overflow-hidden 
+                 border-[0.8px] border-solid border-[#0000001a] cursor-pointer
+                 transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-1" 
+    >
+      <div className="h-[164px] bg-gray-100 relative w-full">
+        <img
+          className="w-full h-full object-cover"
+          src={podcast.imageUrl}
+          alt={`${podcast.title} cover`}
+        />
+      </div>
+      <div className="flex flex-col w-full h-20 items-start gap-1 px-4">
+        <h3 className="[font-family:'Arimo',Helvetica] font-normal text-neutral-950 text-base tracking-[0] leading-6 whitespace-nowrap truncate w-full">
+          {podcast.title}
+        </h3>
+        <p className="[font-family:'Arimo',Helvetica] font-normal text-[#495565] text-sm tracking-[0] leading-5 whitespace-nowrap truncate w-full">
+          {podcast.author}
+        </p>
+      </div>
+    </article>
+  );
+};
+
 
 export const ContainerWrapper = (): JSX.Element => {
-  return (
-    <div className="flex flex-col w-[1144px] h-[465px] items-start gap-8 pt-16 pb-0 px-4 absolute top-[369px] left-0">
-      <div className="flex h-9 items-center justify-between pr-[-7.63e-05px] pl-0 py-0 relative self-stretch w-full">
-        <div className="relative w-[119.86px] h-6">
-          <div className="absolute -top-0.5 left-0 [font-family:'Arimo',Helvetica] font-normal text-neutral-950 text-base tracking-[0] leading-6 whitespace-nowrap">
-            Popular Podcasts
-          </div>
-        </div>
+  const navigate = useNavigate();
+  const [podcasts, setPodcasts] = useState<Podcast[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-        <button className="all-[unset] box-border flex w-[83.24px] items-center justify-center gap-2 px-4 py-2 h-9 relative rounded-lg">
-          <div className="relative w-fit mt-[-1.00px] [font-family:'Arimo',Helvetica] font-normal text-neutral-950 text-sm tracking-[0] leading-5 whitespace-nowrap">
-            View All
-          </div>
+  useEffect(() => {
+    // --- جلب بيانات وهمية ---
+    const fetchPopular = async () => {
+      setIsLoading(true);
+      await new Promise(res => setTimeout(res, 1000)); // محاكاة تحميل
+      setPodcasts([
+        { id: "1", title: "Tech Talks Daily", author: "johndoe", imageUrl: "https://placehold.co/165x165/222/FFF?text=Tech", description: "" },
+        { id: "2", title: "Business Minds", author: "sarahsmith", imageUrl: "https://placehold.co/165x165/444/FFF?text=Business", description: "" },
+        { id: "3", title: "Wellness Hour", author: "johndoe", imageUrl: "https://placehold.co/165x165/666/FFF?text=Wellness", description: "" },
+        { id: "4", title: "Future Learning", author: "sarahsmith", imageUrl: "https://placehold.co/165x165/888/FFF?text=Learning", description: "" },
+        { id: "5", title: "Cinema Secrets", author: "johndoe", imageUrl: "https://placehold.co/165x165/AAA/FFF?text=Cinema", description: "" },
+        { id: "6", title: "Science Unveiled", author: "sarahsmith", imageUrl: "https://placehold.co/165x165/CCC/000?text=Science", description: "" },
+      ]);
+      setIsLoading(false);
+    };
+    fetchPopular();
+  }, []);
+
+  return (
+    <div className="flex flex-col w-full items-start gap-8 pt-16 pb-0 px-4 max-w-6xl mx-auto">
+      <div className="flex h-9 items-center justify-between relative self-stretch w-full">
+        <div className="relative w-fit h-6">
+          <h2 className="[font-family:'Arimo',Helvetica] font-normal text-neutral-950 text-lg md:text-xl tracking-[0] leading-6 whitespace-nowrap">
+            Popular Podcasts
+          </h2>
+        </div>
+        <button 
+          onClick={() => navigate("/browse")}
+          className="all-[unset] box-border flex w-fit items-center justify-center gap-2 px-4 py-2 h-9 relative rounded-lg 
+                     [font-family:'Arimo',Helvetica] font-normal text-neutral-950 text-sm tracking-[0] leading-5
+                     transition-all duration-200 ease-in-out hover:bg-gray-100" // <-- إضافة Hover
+        >
+          View All
         </button>
       </div>
 
-      <div className="relative self-stretch w-full h-[269.34px]">
-        <div className="flex flex-col w-[165px] h-[269px] items-start gap-6 pt-[-1.22e-05px] pl-[1.13e-06px] pr-0 pb-0 absolute top-0 left-0 bg-white rounded-[14px] overflow-hidden border-[0.8px] border-solid border-[#0000001a]">
-          <div className="flex flex-col w-[163.73px] h-[163.73px] items-start relative bg-gray-100">
-            <div className="relative self-stretch w-full h-[163.73px] [background:url(https://c.animaapp.com/mhs1rzskhGRsS4/img/image--tech-talks-daily-.png)_50%_50%_/_cover]" />
-          </div>
-
-          <div className="w-[163.73px] h-20 gap-1 pt-4 pb-0 px-4 flex flex-col items-start relative">
-            <div className="relative self-stretch w-full h-6">
-              <div className="absolute -top-0.5 left-0 [font-family:'Arimo',Helvetica] font-normal text-neutral-950 text-base tracking-[0] leading-6 whitespace-nowrap">
-                Tech Talks Daily
-              </div>
-            </div>
-
-            <div className="relative self-stretch w-full h-5">
-              <div className="absolute -top-px left-0 [font-family:'Arimo',Helvetica] font-normal text-[#495565] text-sm tracking-[0] leading-5 whitespace-nowrap">
-                johndoe
-              </div>
-            </div>
-          </div>
+      {isLoading ? (
+        <div className="w-full text-center [font-family:'Arimo',Helvetica]">Loading popular podcasts...</div>
+      ) : (
+        // (7) تعديل: أصبح Grid مرن (responsive)
+        <div className="self-stretch w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5">
+          {podcasts.map((podcast) => (
+            <PodcastCardSmall key={podcast.id} podcast={podcast} />
+          ))}
         </div>
-
-        <div className="w-[165px] h-[269px] items-start gap-6 pt-[-1.22e-05px] pl-[3.04e-06px] pr-0 pb-0 absolute top-0 left-[189px] overflow-hidden flex flex-col bg-white rounded-[14px] border-[0.8px] border-solid border-[#0000001a]">
-          <div className="w-[163.74px] h-[163.74px] bg-gray-100 flex flex-col items-start relative">
-            <div className="relative self-stretch w-full h-[163.74px] [background:url(https://c.animaapp.com/mhs1rzskhGRsS4/img/image--business-minds-.png)_50%_50%_/_cover]" />
-          </div>
-
-          <div className="w-[163.74px] h-20 gap-1 pt-4 pb-0 px-4 flex flex-col items-start relative">
-            <div className="relative self-stretch w-full h-6">
-              <div className="absolute -top-0.5 left-0 [font-family:'Arimo',Helvetica] font-normal text-neutral-950 text-base tracking-[0] leading-6 whitespace-nowrap">
-                Business Minds
-              </div>
-            </div>
-
-            <div className="relative self-stretch w-full h-5">
-              <div className="absolute -top-px left-0 [font-family:'Arimo',Helvetica] font-normal text-[#495565] text-sm tracking-[0] leading-5 whitespace-nowrap">
-                sarahsmith
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="w-[165px] h-[269px] items-start gap-6 pt-[-1.22e-05px] pl-[-1.22e-05px] pr-0 pb-0 absolute top-0 left-[379px] overflow-hidden flex flex-col bg-white rounded-[14px] border-[0.8px] border-solid border-[#0000001a]">
-          <div className="w-[163.74px] h-[163.74px] bg-gray-100 flex flex-col items-start relative">
-            <div className="relative self-stretch w-full h-[163.74px] [background:url(https://c.animaapp.com/mhs1rzskhGRsS4/img/image--wellness-hour-.png)_50%_50%_/_cover]" />
-          </div>
-
-          <div className="w-[163.74px] h-20 gap-1 pt-4 pb-0 px-4 flex flex-col items-start relative">
-            <div className="relative self-stretch w-full h-6">
-              <div className="absolute -top-0.5 left-0 [font-family:'Arimo',Helvetica] font-normal text-neutral-950 text-base tracking-[0] leading-6 whitespace-nowrap">
-                Wellness Hour
-              </div>
-            </div>
-
-            <div className="relative self-stretch w-full h-5">
-              <div className="absolute -top-px left-0 [font-family:'Arimo',Helvetica] font-normal text-[#495565] text-sm tracking-[0] leading-5 whitespace-nowrap">
-                johndoe
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="w-[165px] h-[269px] items-start gap-6 pt-[-1.22e-05px] pl-[-1.22e-05px] pr-0 pb-0 absolute top-0 left-[568px] overflow-hidden flex flex-col bg-white rounded-[14px] border-[0.8px] border-solid border-[#0000001a]">
-          <div className="flex flex-col w-[163.73px] h-[163.73px] items-start relative bg-gray-100">
-            <div className="relative self-stretch w-full h-[163.73px] [background:url(https://c.animaapp.com/mhs1rzskhGRsS4/img/image--future-learning-.png)_50%_50%_/_cover]" />
-          </div>
-
-          <div className="w-[163.73px] h-20 gap-1 pt-4 pb-0 px-4 flex flex-col items-start relative">
-            <div className="relative self-stretch w-full h-6">
-              <div className="absolute -top-0.5 left-0 [font-family:'Arimo',Helvetica] font-normal text-neutral-950 text-base tracking-[0] leading-6 whitespace-nowrap">
-                Future Learning
-              </div>
-            </div>
-
-            <div className="relative self-stretch w-full h-5">
-              <div className="absolute -top-px left-0 [font-family:'Arimo',Helvetica] font-normal text-[#495565] text-sm tracking-[0] leading-5 whitespace-nowrap">
-                sarahsmith
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="w-[165px] h-[269px] items-start gap-6 pt-[-1.22e-05px] pl-[-1.22e-05px] pr-0 pb-0 absolute top-0 left-[757px] overflow-hidden flex flex-col bg-white rounded-[14px] border-[0.8px] border-solid border-[#0000001a]">
-          <div className="w-[163.74px] h-[163.74px] bg-gray-100 flex flex-col items-start relative">
-            <div className="relative self-stretch w-full h-[163.74px] [background:url(https://c.animaapp.com/mhs1rzskhGRsS4/img/image--cinema-secrets-.png)_50%_50%_/_cover]" />
-          </div>
-
-          <div className="w-[163.74px] h-20 gap-1 pt-4 pb-0 px-4 flex flex-col items-start relative">
-            <div className="relative self-stretch w-full h-6">
-              <div className="absolute -top-0.5 left-0 [font-family:'Arimo',Helvetica] font-normal text-neutral-950 text-base tracking-[0] leading-6 whitespace-nowrap">
-                Cinema Secrets
-              </div>
-            </div>
-
-            <div className="relative self-stretch w-full h-5">
-              <div className="absolute -top-px left-0 [font-family:'Arimo',Helvetica] font-normal text-[#495565] text-sm tracking-[0] leading-5 whitespace-nowrap">
-                johndoe
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="w-[165px] h-[269px] items-start gap-6 pt-[-1.22e-05px] pl-[-1.22e-05px] pr-0 pb-0 absolute top-0 left-[947px] overflow-hidden flex flex-col bg-white rounded-[14px] border-[0.8px] border-solid border-[#0000001a]">
-          <div className="w-[163.74px] h-[163.74px] bg-gray-100 flex flex-col items-start relative">
-            <div className="relative self-stretch w-full h-[163.74px] [background:url(https://c.animaapp.com/mhs1rzskhGRsS4/img/image--science-unveiled-.png)_50%_50%_/_cover]" />
-          </div>
-
-          <div className="w-[163.74px] h-20 gap-1 pt-4 pb-0 px-4 flex flex-col items-start relative">
-            <div className="relative self-stretch w-full h-6">
-              <div className="absolute -top-0.5 left-0 [font-family:'Arimo',Helvetica] font-normal text-neutral-950 text-base tracking-[0] leading-6 whitespace-nowrap">
-                Science Unveiled
-              </div>
-            </div>
-
-            <div className="relative self-stretch w-full h-5">
-              <div className="absolute -top-px left-0 [font-family:'Arimo',Helvetica] font-normal text-[#495565] text-sm tracking-[0] leading-5 whitespace-nowrap">
-                sarahsmith
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      )}
     </div>
   );
 };

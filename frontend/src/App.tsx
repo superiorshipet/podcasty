@@ -1,28 +1,50 @@
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-// 1. قم باستدعاء (Import) لكل صفحاتك هنا
-import { LandingPage } from "./screens/LandingPage"; 
-import { Login } from "./screens/Login";
-import { Signup } from "./screens/Signup";
-import { Browse } from "./screens/Browse"; // <-- تمت إضافته
-import { EditProfile } from "./screens/EditProfile"; // <-- تمت إضافته
-import { Profile } from "./screens/Profile"; // <-- تمت إضافته
-import { Podcast } from "./screens/Podcast"; // <-- تمت إضافته
+import { Navbar } from "./components/Navbar";
+import { ProtectedRoute } from "./components/ProtectedRoute";
+import { GlobalPlayer } from "./components/GlobalPlayer";
+import { Footer } from "./components/Footer";
+import { LoginPromptModal } from "./components/LoginPromptModal";
+
+import { LandingPage } from "./screens/LandingPage/LandingPage";
+import { Login } from "./screens/Login/Login";
+import { Signup } from "./screens/Signup/Signup";
+import { Browse } from "./screens/Browse/Browse";
+import { Podcast } from "./screens/Podcast/Podcast";
+import { Profile } from "./screens/Profile/Profile";
+import { EditProfile } from "./screens/EditProfile/EditProfile";
+// import { Category } from "./screens/Category/Category";
 
 function App() {
   return (
-    // 2. عرف المسارات (Routes) هنا
-    <Routes>
-      <Route path="/" element={<LandingPage />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/signup" element={<Signup />} />
+    <div className="flex flex-col min-h-screen">
       
-      {/* --- المسارات الجديدة --- */}
-      <Route path="/browse" element={<Browse />} />
-      <Route path="/edit-profile" element={<EditProfile />} />
-      <Route path="/profile" element={<Profile />} />
-      <Route path="/podcast" element={<Podcast />} />
-    </Routes>
+      <Navbar />
+      
+      <main className="flex-1 pt-[73px] pb-20">
+        <Routes>
+          
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/browse" element={<Browse />} />
+          <Route path="/podcast/:podcastId" element={<Podcast />} />
+          {/* <Route path="/category/:categoryId" element={<Category />} /> */}
+
+          
+          <Route element={<ProtectedRoute />}>
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/edit-profile" element={<EditProfile />} />
+            {/* <Route path="/my-library" element={<MyLibrary />} /> */}
+          </Route>
+        </Routes>
+      </main>
+      
+      <GlobalPlayer />
+      <Footer />
+      <LoginPromptModal />
+    </div>
   );
 }
 
