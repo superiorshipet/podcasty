@@ -1,22 +1,37 @@
 logs
-*.log
-npm-debug.log*
+.log
+npm-debug.log
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+Dependencies
+node_modules/
 
+Build / Distribution
+dist/
+dist-ssr/
+
+Vite
+/.vite/
+Testing
+coverage/
+
+Environment Variables
+.env
+.env.local
+.env.*.local
+
+IDE / Editor Settings
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
+
+OS Specific
 .DS_Store
 *.suo
-*.ntvs*
+.ntvs
 *.njsproj
 *.sln
 *.sw?
