@@ -1,32 +1,49 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
+import { SignupData } from "../../types"; // <-- (1) استدعاء الـ Type الجديد
 
 export const Signup = () => {
   const navigate = useNavigate();
-  const { signup, isLoading } = useAuth(); // استدعاء دالة التسجيل من الـ Context
+  const { signup, isLoading } = useAuth(); 
 
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  // (2) تحديث الـ State ليحتوي على الحقول الجديدة
+  const [formData, setFormData] = useState<SignupData>({
+    firstName: "",
+    lastName: "",
+    username: "",
+    email: "",
+    password: "",
+  });
+  
   const [error, setError] = useState<string | null>(null);
+
+  // دالة موحدة لتحديث الفورم
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
 
-    if (!username || !email || !password) {
+    // (3) التحقق من الحقول الجديدة
+    if (!formData.firstName || !formData.lastName || !formData.username || !formData.email || !formData.password) {
       setError("Please fill in all fields.");
       return;
     }
-    if (password.length < 8) {
+    if (formData.password.length < 8) {
       setError("Password must be at least 8 characters.");
       return;
     }
 
     try {
-      await signup(username, email, password);
-      navigate("/profile"); 
+      // (4) إرسال الأوبجكت المكتمل
+      await signup(formData); 
+      navigate("/profile"); // بعد النجاح، اذهب للبروفايل
     } catch (err: any) {
       setError(err.message || "Failed to create account.");
     }
@@ -34,8 +51,7 @@ export const Signup = () => {
 
   return (
     <div className="bg-white w-full min-h-screen flex items-center justify-center pt-12">
-      {}
-      <div className="flex flex-col w-[446px] items-start gap-6 p-6 bg-white rounded-lg border-[0.8px] border-solid border-[#0000001a] shadow-md">
+      <div className="flex flex-col w-full max-w-md items-start gap-6 p-6 bg-white rounded-lg border-[0.8px] border-solid border-[#0000001a] shadow-md m-4">
         
         <header className="w-full">
           <h1 className="[font-family:'Arimo',Helvetica] font-normal text-neutral-950 text-xl tracking-[0] leading-4">
@@ -50,26 +66,48 @@ export const Signup = () => {
           className="flex flex-col w-full items-start gap-4"
           onSubmit={handleSubmit}
         >
-          <div className="flex-col h-[50px] items-start self-stretch w-full flex relative">
+          {/* --- (5) إضافة حقل First Name --- */}
+          <div className="flex-col h-auto items-start self-stretch w-full flex relative">
             <label
               className="[font-family:'Arimo',Helvetica] font-normal text-neutral-950 text-sm mb-1"
-              htmlFor="email"
+              htmlFor="firstName"
             >
-              Email
+              First Name
             </label>
             <input
               className="h-9 px-3 py-1 relative self-stretch w-full bg-[#f3f3f5] rounded-lg border-[0.8px] border-solid border-transparent [font-family:'Arimo',Helvetica] font-normal text-sm"
-              id="email"
-              name="email"
-              placeholder="you@example.com"
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              id="firstName"
+              name="firstName"
+              placeholder="John"
+              type="text"
+              value={formData.firstName}
+              onChange={handleChange}
               required
             />
           </div>
 
-          <div className="flex-col h-[50px] items-start self-stretch w-full flex relative">
+          {/* --- (6) إضافة حقل Last Name --- */}
+          <div className="flex-col h-auto items-start self-stretch w-full flex relative">
+            <label
+              className="[font-family:'Arimo',Helvetica] font-normal text-neutral-950 text-sm mb-1"
+              htmlFor="lastName"
+            >
+              Last Name
+            </label>
+            <input
+              className="h-9 px-3 py-1 relative self-stretch w-full bg-[#f3f3f5] rounded-lg border-[0.8px] border-solid border-transparent [font-family:'Arimo',Helvetica] font-normal text-sm"
+              id="lastName"
+              name="lastName"
+              placeholder="Doe"
+              type="text"
+              value={formData.lastName}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          {/* --- حقل Username --- */}
+          <div className="flex-col h-auto items-start self-stretch w-full flex relative">
             <label
               className="[font-family:'Arimo',Helvetica] font-normal text-neutral-950 text-sm mb-1"
               htmlFor="username"
@@ -82,13 +120,34 @@ export const Signup = () => {
               name="username"
               placeholder="johndoe"
               type="text"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              value={formData.username}
+              onChange={handleChange}
               required
             />
           </div>
 
-          <div className="flex-col h-[50px] items-start self-stretch w-full flex relative">
+          {/* --- حقل Email --- */}
+          <div className="flex-col h-auto items-start self-stretch w-full flex relative">
+            <label
+              className="[font-family:'Arimo',Helvetica] font-normal text-neutral-950 text-sm mb-1"
+              htmlFor="email"
+            >
+              Email
+            </label>
+            <input
+              className="h-9 px-3 py-1 relative self-stretch w-full bg-[#f3f3f5] rounded-lg border-[0.8px] border-solid border-transparent [font-family:'Arimo',Helvetica] font-normal text-sm"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+              type="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          {/* --- حقل Password --- */}
+          <div className="flex-col h-auto items-start self-stretch w-full flex relative">
             <label
               className="[font-family:'Arimo',Helvetica] font-normal text-neutral-950 text-sm mb-1"
               htmlFor="password"
@@ -101,8 +160,8 @@ export const Signup = () => {
               name="password"
               placeholder="••••••••"
               type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              value={formData.password}
+              onChange={handleChange}
               required
               minLength={8}
             />
@@ -118,7 +177,7 @@ export const Signup = () => {
           <button
             type="submit"
             disabled={isLoading}
-            className="all-[unset] box-border bg-[#030213] relative self-stretch w-full h-9 rounded-lg text-white text-center [font-family:'Arimo',Helvetica] disabled:opacity-50"
+            className="all-[unset] box-border bg-[#030213] relative self-stretch w-full h-9 rounded-lg text-white text-center [font-family:'Arimo',Helvetica] disabled:opacity-50 transition-opacity hover:bg-opacity-90"
           >
             {isLoading ? "Creating Account..." : "Sign Up"}
           </button>
@@ -129,7 +188,7 @@ export const Signup = () => {
             Already have an account?{" "}
             <button
               onClick={() => navigate("/login")}
-              className="[font-family:'Arimo',Helvetica] font-normal text-[#155cfb] text-sm"
+              className="[font-family:'Arimo',Helvetica] font-normal text-[#155cfb] text-sm hover:underline"
             >
               Login
             </button>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
+import { LoginData } from "../../types"; // <-- (1) استدعاء الـ Type
 
 export const Login = () => {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ export const Login = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError(null); // مسح الأخطاء القديمة
+    setError(null); 
     
     if (!email || !password) {
       setError("Please fill in all fields.");
@@ -20,7 +21,10 @@ export const Login = () => {
     }
 
     try {
-      await login(email, password);
+      // (2) التعديل الأهم: إرسال البيانات كـ "أوبجكت"
+      const loginData: LoginData = { email, password };
+      await login(loginData);
+      
       navigate("/profile"); // بعد النجاح، اذهب للبروفايل
     } catch (err: any) {
       setError(err.message || "Failed to login. Please check your credentials.");
@@ -30,9 +34,9 @@ export const Login = () => {
   return (
     <div className="bg-white w-full min-h-screen flex items-center justify-center pt-12">
       {/* تم حذف الـ Navbar المكرر من هنا.
-        الـ Navbar العالمي من App.tsx سيظهر بدلاً منه.
+          الـ Navbar العالمي من App.tsx سيظهر بدلاً منه.
       */}
-      <div className="flex flex-col w-[446px] items-start gap-6 p-6 bg-white rounded-lg border-[0.8px] border-solid border-[#0000001a] shadow-md">
+      <div className="flex flex-col w-full max-w-md items-start gap-6 p-6 bg-white rounded-lg border-[0.8px] border-solid border-[#0000001a] shadow-md m-4">
         
         {/* --- Header --- */}
         <div className="w-full">
@@ -47,7 +51,7 @@ export const Login = () => {
         {/* --- Form --- */}
         <form className="flex flex-col w-full items-start gap-4" onSubmit={handleSubmit}>
           
-          <div className="flex-col h-[50px] items-start self-stretch w-full flex relative">
+          <div className="flex-col h-auto items-start self-stretch w-full flex relative">
             <label
               className="[font-family:'Arimo',Helvetica] font-normal text-neutral-950 text-sm mb-1"
               htmlFor="email"
@@ -61,10 +65,11 @@ export const Login = () => {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
           </div>
 
-          <div className="flex-col h-[50px] items-start self-stretch w-full flex relative">
+          <div className="flex-col h-auto items-start self-stretch w-full flex relative">
             <label
               className="[font-family:'Arimo',Helvetica] font-normal text-neutral-950 text-sm mb-1"
               htmlFor="password"
@@ -78,6 +83,7 @@ export const Login = () => {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              required
             />
           </div>
 
@@ -91,7 +97,7 @@ export const Login = () => {
           <button 
             type="submit"
             disabled={isLoading}
-            className="all-[unset] box-border bg-[#030213] relative self-stretch w-full h-9 rounded-lg text-white text-center [font-family:'Arimo',Helvetica] disabled:opacity-50"
+            className="all-[unset] box-border bg-[#030213] relative self-stretch w-full h-9 rounded-lg text-white text-center [font-family:'Arimo',Helvetica] disabled:opacity-50 transition-opacity hover:bg-opacity-90"
           >
             {isLoading ? "Logging in..." : "Login"}
           </button>
@@ -104,7 +110,7 @@ export const Login = () => {
           </span>
           <button
             onClick={() => navigate("/signup")}
-            className="[font-family:'Arimo',Helvetica] font-normal text-[#155cfb] text-sm"
+            className="[font-family:'Arimo',Helvetica] font-normal text-[#155cfb] text-sm hover:underline"
           >
             Sign up
           </button>

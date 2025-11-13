@@ -53,8 +53,8 @@ export const Browse = (): JSX.Element => {
         await new Promise(res => setTimeout(res, 1000));
         setCategories([
           { id: "all", label: "All" },
-          { id: "technology", label: "💻 Technology" },
-          { id: "business", label: "💼 Business" },
+          { id: "technology", label: "Technology" },
+          { id: "business", label: "Business" },
         ]);
         setPodcasts([
           { id: "1", title: "Tech Talks Daily", author: "johndoe", imageUrl: "https://placehold.co/260x260/222/FFF?text=Tech", description: "" },
@@ -74,8 +74,7 @@ export const Browse = (): JSX.Element => {
     <div
       className="bg-white w-full min-h-screen relative"
     >
-      {/* تم حذف الـ Navbar المكرر من هنا.
-      */}
+      {}
 
       {/* Main Content */}
       <main className="flex flex-col w-full max-w-6xl mx-auto items-start gap-8 pt-8 pb-12 px-4">

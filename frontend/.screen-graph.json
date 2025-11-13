@@ -49,6 +49,20 @@
       "routes": [
         "/edit-profile"
       ]
+    },
+    {
+      "id": "src/screens/UploadPodcast/UploadPodcast.tsx",
+      "label": "UploadPodcast",
+      "routes": [
+        "/upload-podcast"
+      ]
+    },
+    {
+      "id": "src/screens/CreatorDashboard/CreatorDashboard.tsx",
+      "label": "CreatorDashboard",
+      "routes": [
+        "/creator/dashboard"
+      ]
     }
   ],
   "edges": [
@@ -85,15 +99,15 @@
       }
     },
     {
-      "id": "src\\screens\\Login\\Login.tsx:24:6-to-src\\screens\\Profile\\Profile.tsx",
+      "id": "src\\screens\\Login\\Login.tsx:28:6-to-src\\screens\\Profile\\Profile.tsx",
       "source": "src\\screens\\Login\\Login.tsx",
       "target": "src\\screens\\Profile\\Profile.tsx",
       "data": {
         "viaRoute": "/profile",
         "trigger": {
           "element": "navigate(\"/profile\")",
-          "line": 24,
-          "endLine": 24,
+          "line": 28,
+          "endLine": 28,
           "column": 6,
           "endColumn": 26,
           "sourceFile": "src\\screens\\Login\\Login.tsx"
@@ -101,15 +115,15 @@
       }
     },
     {
-      "id": "src\\screens\\Login\\Login.tsx:106:27-to-src\\screens\\Signup\\Signup.tsx",
+      "id": "src\\screens\\Login\\Login.tsx:112:27-to-src\\screens\\Signup\\Signup.tsx",
       "source": "src\\screens\\Login\\Login.tsx",
       "target": "src\\screens\\Signup\\Signup.tsx",
       "data": {
         "viaRoute": "/signup",
         "trigger": {
           "element": "navigate(\"/signup\")",
-          "line": 106,
-          "endLine": 106,
+          "line": 112,
+          "endLine": 112,
           "column": 27,
           "endColumn": 46,
           "sourceFile": "src\\screens\\Login\\Login.tsx"
@@ -117,15 +131,15 @@
       }
     },
     {
-      "id": "src\\screens\\Signup\\Signup.tsx:29:6-to-src\\screens\\Profile\\Profile.tsx",
+      "id": "src\\screens\\Signup\\Signup.tsx:46:6-to-src\\screens\\Profile\\Profile.tsx",
       "source": "src\\screens\\Signup\\Signup.tsx",
       "target": "src\\screens\\Profile\\Profile.tsx",
       "data": {
         "viaRoute": "/profile",
         "trigger": {
           "element": "navigate(\"/profile\")",
-          "line": 29,
-          "endLine": 29,
+          "line": 46,
+          "endLine": 46,
           "column": 6,
           "endColumn": 26,
           "sourceFile": "src\\screens\\Signup\\Signup.tsx"
@@ -133,15 +147,15 @@
       }
     },
     {
-      "id": "src\\screens\\Signup\\Signup.tsx:131:29-to-src\\screens\\Login\\Login.tsx",
+      "id": "src\\screens\\Signup\\Signup.tsx:190:29-to-src\\screens\\Login\\Login.tsx",
       "source": "src\\screens\\Signup\\Signup.tsx",
       "target": "src\\screens\\Login\\Login.tsx",
       "data": {
         "viaRoute": "/login",
         "trigger": {
           "element": "navigate(\"/login\")",
-          "line": 131,
-          "endLine": 131,
+          "line": 190,
+          "endLine": 190,
           "column": 29,
           "endColumn": 47,
           "sourceFile": "src\\screens\\Signup\\Signup.tsx"
@@ -149,82 +163,98 @@
       }
     },
     {
-      "id": "src\\screens\\Profile\\Profile.tsx:38:12-to-src\\screens\\Browse\\Browse.tsx",
+      "id": "src\\screens\\Profile\\Profile.tsx:49:6-to-src\\screens\\CreatorDashboard\\CreatorDashboard.tsx",
       "source": "src\\screens\\Profile\\Profile.tsx",
-      "target": "src\\screens\\Browse\\Browse.tsx",
+      "target": "src\\screens\\CreatorDashboard\\CreatorDashboard.tsx",
       "data": {
-        "viaRoute": "/browse",
+        "viaRoute": "/creator/dashboard",
         "trigger": {
-          "element": "<a href=\"/browse\" className=\"relative w-[50.84px] h-6\">\r\n              <span className=\"absolute -top-0.5 left-0 [font-family:'Arimo-Regular',Helvetica] font-normal text-[#354152] text-base tracking-[0] leading-6 whitespace-nowrap\">\r\n                Browse\r\n              </span>\r\n            </a>",
-          "line": 38,
-          "endLine": 42,
-          "column": 12,
-          "endColumn": 16,
+          "element": "navigate(\"/creator/dashboard\")",
+          "line": 49,
+          "endLine": 49,
+          "column": 6,
+          "endColumn": 36,
           "sourceFile": "src\\screens\\Profile\\Profile.tsx"
         }
       }
     },
     {
-      "id": "src\\screens\\EditProfile\\EditProfile.tsx:102:4-to-src\\screens\\Profile\\Profile.tsx",
-      "source": "src\\screens\\EditProfile\\EditProfile.tsx",
-      "target": "src\\screens\\Profile\\Profile.tsx",
+      "id": "src\\screens\\Profile\\Profile.tsx:51:6-to-src\\screens\\UploadPodcast\\UploadPodcast.tsx",
+      "source": "src\\screens\\Profile\\Profile.tsx",
+      "target": "src\\screens\\UploadPodcast\\UploadPodcast.tsx",
       "data": {
-        "viaRoute": "/profile",
+        "viaRoute": "/upload-podcast",
         "trigger": {
-          "element": "navigate(\"/profile\")",
-          "line": 102,
-          "endLine": 102,
-          "column": 4,
-          "endColumn": 24,
-          "sourceFile": "src\\screens\\EditProfile\\EditProfile.tsx"
+          "element": "navigate(\"/upload-podcast\")",
+          "line": 51,
+          "endLine": 51,
+          "column": 6,
+          "endColumn": 33,
+          "sourceFile": "src\\screens\\Profile\\Profile.tsx"
         }
       }
     },
     {
-      "id": "src\\screens\\EditProfile\\EditProfile.tsx:135:29-to-src\\screens\\Browse\\Browse.tsx",
-      "source": "src\\screens\\EditProfile\\EditProfile.tsx",
-      "target": "src\\screens\\Browse\\Browse.tsx",
+      "id": "src\\screens\\Profile\\Profile.tsx:109:29-to-src\\screens\\EditProfile\\EditProfile.tsx",
+      "source": "src\\screens\\Profile\\Profile.tsx",
+      "target": "src\\screens\\EditProfile\\EditProfile.tsx",
       "data": {
-        "viaRoute": "/browse",
+        "viaRoute": "/edit-profile",
         "trigger": {
-          "element": "navigate(\"/browse\")",
-          "line": 135,
-          "endLine": 135,
+          "element": "navigate(\"/edit-profile\")",
+          "line": 109,
+          "endLine": 109,
           "column": 29,
-          "endColumn": 48,
-          "sourceFile": "src\\screens\\EditProfile\\EditProfile.tsx"
+          "endColumn": 54,
+          "sourceFile": "src\\screens\\Profile\\Profile.tsx"
         }
       }
     },
     {
-      "id": "src\\screens\\EditProfile\\EditProfile.tsx:160:29-to-src\\screens\\Profile\\Profile.tsx",
+      "id": "src\\screens\\EditProfile\\EditProfile.tsx:118:6-to-src\\screens\\Profile\\Profile.tsx",
       "source": "src\\screens\\EditProfile\\EditProfile.tsx",
       "target": "src\\screens\\Profile\\Profile.tsx",
       "data": {
         "viaRoute": "/profile",
         "trigger": {
           "element": "navigate(\"/profile\")",
-          "line": 160,
-          "endLine": 160,
-          "column": 29,
-          "endColumn": 49,
+          "line": 118,
+          "endLine": 118,
+          "column": 6,
+          "endColumn": 26,
           "sourceFile": "src\\screens\\EditProfile\\EditProfile.tsx"
         }
       }
     },
     {
-      "id": "src\\screens\\EditProfile\\EditProfile.tsx:227:31-to-src\\screens\\Profile\\Profile.tsx",
+      "id": "src\\screens\\EditProfile\\EditProfile.tsx:224:31-to-src\\screens\\Profile\\Profile.tsx",
       "source": "src\\screens\\EditProfile\\EditProfile.tsx",
       "target": "src\\screens\\Profile\\Profile.tsx",
       "data": {
         "viaRoute": "/profile",
         "trigger": {
           "element": "navigate(\"/profile\")",
-          "line": 227,
-          "endLine": 227,
+          "line": 224,
+          "endLine": 224,
           "column": 31,
           "endColumn": 51,
           "sourceFile": "src\\screens\\EditProfile\\EditProfile.tsx"
+        }
+      }
+    },
+    {
+      "id": "src\\screens\\CreatorDashboard\\CreatorDashboard.tsx:14:25-to-src\\screens\\UploadPodcast\\UploadPodcast.tsx",
+      "source": "src\\screens\\CreatorDashboard\\CreatorDashboard.tsx",
+      "target": "src\\screens\\UploadPodcast\\UploadPodcast.tsx",
+      "data": {
+        "viaRoute": "/upload-podcast",
+        "trigger": {
+          "element": "navigate(\"/upload-podcast\")",
+          "line": 14,
+          "endLine": 14,
+          "column": 25,
+          "endColumn": 52,
+          "sourceFile": "src\\screens\\CreatorDashboard\\CreatorDashboard.tsx"
         }
       }
     }

@@ -47,7 +47,7 @@ export const Podcast = (): JSX.Element => {
       setIsLoading(true);
       setError(null);
       try {
-        // --- [هنا ستضع كود جلب الـ API] ---
+        // --- [ API] ---
         // const podcastRes = await fetch(`/api/podcasts/${podcastId}`);
         // const episodesRes = await fetch(`/api/podcasts/${podcastId}/episodes`);
         // const podcastData = await podcastRes.json();
@@ -79,7 +79,7 @@ export const Podcast = (): JSX.Element => {
     fetchPodcastData();
   }, [podcastId]);
 
-  // --- (3) دوال الـ "Guest Mode" ---
+  // ---"Guest Mode" ---
   const handlePlay = (episode: Episode) => {
     if (!user) {
       openLoginModal();
@@ -136,7 +136,7 @@ export const Podcast = (): JSX.Element => {
         </h2>
         <p className="text-base text-gray-600">by {podcastInfo.author}</p>
 
-        {/* (4) ربط الأزرار بالدوال الجديدة */}
+        {}
         <button 
           onClick={handleFollow}
           className="all-[unset] box-border w-full h-10 flex items-center justify-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-lg cursor-pointer transition-colors duration-200 hover:bg-gray-700"

@@ -29,7 +29,7 @@ export const Footer = (): JSX.Element => {
         </div>
         <div className="relative self-stretch w-full h-5">
           <p className="[font-family:'Arimo',Helvetica] font-normal text-[#697282] text-sm text-center">
-            © 2025 Podstream. All rights reserved.
+            © 2025 Podcasty. All rights reserved.
           </p>
         </div>
       </div>

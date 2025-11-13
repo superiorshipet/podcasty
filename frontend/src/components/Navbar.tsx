@@ -25,7 +25,7 @@ export const Navbar = () => {
             />
             <div className="relative flex-1 grow h-7">
               <h1 className="absolute -top-0.5 left-0 [font-family:'Arimo-Regular',Helvetica] font-normal text-neutral-950 text-xl tracking-[0] leading-7 whitespace-nowrap">
-                Podstream
+                Podcasty
               </h1>
             </div>
           </button>
