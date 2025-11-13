@@ -1,40 +1,32 @@
 import React, { useState } from "react";
-// Import necessary types from React
 import { ChangeEvent, FormEvent, FC } from "react";
 
-// 1. Define the type for your component's state (FormData)
 interface FormData {
   email: string;
   username: string;
   password: string;
 }
 
-// 2. Use the FC (FunctionComponent) type for your component
 export const Signup: FC = () => {
-  // 3. Explicitly type the useState hook
   const [formData, setFormData] = useState<FormData>({
     email: "",
     username: "",
     password: "",
   });
 
-  // 4. Type the input change handler using ChangeEvent<HTMLInputElement>
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    // TypeScript ensures 'name' is a key of FormData when spreading
     setFormData((prev) => ({
       ...prev,
       [name]: value,
     }));
   };
 
-  // 5. Type the form submission handler using FormEvent<HTMLFormElement>
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
   };
 
-  // 6. Simple handlers for button clicks (no event needed)
   const handleLoginClick = () => {
     console.log("Navigate to login");
   };
