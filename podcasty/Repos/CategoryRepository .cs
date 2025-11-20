@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using podcasty.Models;
 using podcasty.Interfaces;
-
+using podcasty.Dtos;
 namespace podcasty.Repos;
 
 public class CategoryRepository : ICategoryRepository
@@ -57,5 +57,24 @@ public class CategoryRepository : ICategoryRepository
         await _db.SaveChangesAsync();
         return true;
     }
-  
+    public async Task<bool> UpdateAsync(int id, CategoryDto dto)
+    {
+        var category = await _db.Categories.FindAsync(id);
+        if (category == null) return false;
+        category.Name = dto.Name;
+        await _db.SaveChangesAsync();
+        return true;
+    }
+    public async Task<Category> AddAsync(CategoryDto dto)
+    {
+        var category = new Category
+        {
+            Name = dto.Name,
+            Icon = dto.Icon
+        };
+        _db.Categories.Add(category);
+        await _db.SaveChangesAsync();
+        return category;
+    }
+
 }

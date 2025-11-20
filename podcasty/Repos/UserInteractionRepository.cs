@@ -49,6 +49,28 @@ namespace podcasty.Repos
             await _db.SaveChangesAsync();
             return true;
         }
+        public async Task<UserInteraction> GetByIdAsync(int id)
+        {
+            return await _db.UserInteractions.FindAsync(id);
+        }   
+        public async Task<UserInteraction> GetCommentByIdAsync(int commentId)
+        {
+            return await _db.UserInteractions
+                .FirstOrDefaultAsync(ui =>
+                    ui.InteractionId == commentId &&
+                    ui.Interaction == InteractionType.Comment);
+        }
+        public async Task<UserInteraction> GetCommentsAsync(int userId)
+        {
+            return await _db.UserInteractions
+                .FirstOrDefaultAsync(ui =>
+                    ui.UserId == userId &&
+                    ui.Interaction == InteractionType.Comment);
+        }
+        public async Task<UserInteraction> GetAllAsync()
+        {
+            return await _db.UserInteractions.FirstOrDefaultAsync();
+        }
 
     }
 }

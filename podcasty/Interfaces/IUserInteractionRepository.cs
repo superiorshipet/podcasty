@@ -10,5 +10,9 @@ namespace podcasty.Interfaces
         Task<bool> DeleteAsync(int interactionId);
         Task<bool> UpdateCommentContent(int interactionId, int userId, string newContent);
         Task<UserInteraction> GetInteractionByIdAsync(int interactionId);
+        Task<UserInteraction> GetByIdAsync(int id);
+        Task<UserInteraction>GetCommentByIdAsync(int commentId);
+        Task<UserInteraction> GetCommentsAsync(int userId);
+        Task<UserInteraction> GetAllAsync();
     }
 }

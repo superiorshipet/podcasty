@@ -7,5 +7,6 @@
         public string Title { get; set; }
         public string? Description { get; set; }
         public string? CoverImage { get; set; }
+        public Enums.PodcastStatus Status { get; set; }
     }
 }

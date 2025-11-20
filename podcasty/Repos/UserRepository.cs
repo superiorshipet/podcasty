@@ -24,5 +24,42 @@ namespace podcasty.Repos
 
             return result.Succeeded;
         }
+        public IEnumerable<User> GetByEmail(string email)
+        {
+            return _userManager.Users.Where(u => u.Email == email).ToList();
+        }
+        public IEnumerable<User> GetAll()
+        {
+            return _userManager.Users.ToList();
+        }
+        public bool ChangeRole(int id, string newRole)
+        {
+            var user = _userManager.FindByIdAsync(id.ToString()).Result;
+            if (user == null) return false;
+            var removeResult = _userManager.RemoveFromRolesAsync(user, _userManager.GetRolesAsync(user).Result).Result;
+            if (!removeResult.Succeeded) return false;
+            var addResult = _userManager.AddToRoleAsync(user, newRole).Result;
+            return addResult.Succeeded;
+        }
+        public bool SetBanStatus(int id, bool banned)
+        {
+            var user = _userManager.FindByIdAsync(id.ToString()).Result;
+            if (user == null) return false;
+            user.IsBanned = banned;
+            var result = _userManager.UpdateAsync(user).Result;
+            return result.Succeeded;
+        }
+        public bool Delete(int id)
+        {
+            var user = _userManager.FindByIdAsync(id.ToString()).Result;
+            if (user == null) return false;
+            var result = _userManager.DeleteAsync(user).Result;
+            return result.Succeeded;
+        }
+        public IEnumerable<User> GetByName(string name)
+        {
+            return _userManager.Users.Where(u => u.UserName.Contains(name)).ToList();
+        }
     }
+
 }
