@@ -3,14 +3,11 @@
   <PropertyGroup>
 <<<<<<< HEAD
     <ActiveDebugProfile>http</ActiveDebugProfile>
-
-    <ActiveDebugProfile>IIS Express</ActiveDebugProfile>
- 
-    <Controller_SelectedScaffolderID>ApiControllerEmptyScaffolder</Controller_SelectedScaffolderID>
-    <Controller_SelectedScaffolderCategoryPath>root/Common/Api</Controller_SelectedScaffolderCategoryPath>
 =======
     <ActiveDebugProfile>IIS Express</ActiveDebugProfile>
->>>>>>> 968c047d233a04df635bed67e44c1d22f634293c
+>>>>>>> 45245a0a6cca241d1c5ce6f8a975fa13d27dc339
+    <Controller_SelectedScaffolderID>ApiControllerEmptyScaffolder</Controller_SelectedScaffolderID>
+    <Controller_SelectedScaffolderCategoryPath>root/Common/Api</Controller_SelectedScaffolderCategoryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
