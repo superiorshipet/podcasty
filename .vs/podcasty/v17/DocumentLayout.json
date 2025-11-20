@@ -1,5 +1,20 @@
 {
   "Version": 1,
+<<<<<<< HEAD
+  "WorkspaceRootPath": "C:\\Users\\DELL\\source\\repos\\podcasty\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F2D826A0-E75F-4260-9FDA-6EAB2531FD85}|podcasty\\podcasty.csproj|c:\\users\\dell\\source\\repos\\podcasty\\podcasty\\controllers\\adminanalyticscontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2D826A0-E75F-4260-9FDA-6EAB2531FD85}|podcasty\\podcasty.csproj|solutionrelative:podcasty\\controllers\\adminanalyticscontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2D826A0-E75F-4260-9FDA-6EAB2531FD85}|podcasty\\podcasty.csproj|c:\\users\\dell\\source\\repos\\podcasty\\podcasty\\repos\\analyticrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2D826A0-E75F-4260-9FDA-6EAB2531FD85}|podcasty\\podcasty.csproj|solutionrelative:podcasty\\repos\\analyticrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2D826A0-E75F-4260-9FDA-6EAB2531FD85}|podcasty\\podcasty.csproj|c:\\users\\dell\\source\\repos\\podcasty\\podcasty\\dtos\\podcastreportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2D826A0-E75F-4260-9FDA-6EAB2531FD85}|podcasty\\podcasty.csproj|solutionrelative:podcasty\\dtos\\podcastreportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
   "WorkspaceRootPath": "C:\\Users\\CM\\source\\repos\\podcasty\\",
   "Documents": [
     {
@@ -17,6 +32,7 @@
     {
       "AbsoluteMoniker": "D:0:0:{F2D826A0-E75F-4260-9FDA-6EAB2531FD85}|podcasty\\podcasty.csproj|c:\\users\\cm\\source\\repos\\podcasty\\podcasty\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{F2D826A0-E75F-4260-9FDA-6EAB2531FD85}|podcasty\\podcasty.csproj|solutionrelative:podcasty\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+>>>>>>> 968c047d233a04df635bed67e44c1d22f634293c
     }
   ],
   "DocumentGroupContainers": [
@@ -26,8 +42,38 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
+          "SelectedChildIndex": 0,
+=======
           "SelectedChildIndex": 8,
+>>>>>>> 968c047d233a04df635bed67e44c1d22f634293c
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminAnalyticsController .cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\podcasty\\podcasty\\Controllers\\AdminAnalyticsController .cs",
+              "RelativeDocumentMoniker": "podcasty\\Controllers\\AdminAnalyticsController .cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\podcasty\\podcasty\\Controllers\\AdminAnalyticsController .cs",
+              "RelativeToolTip": "podcasty\\Controllers\\AdminAnalyticsController .cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T00:16:52.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PodcastReportDto.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\podcasty\\podcasty\\Dtos\\PodcastReportDto.cs",
+              "RelativeDocumentMoniker": "podcasty\\Dtos\\PodcastReportDto.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\podcasty\\podcasty\\Dtos\\PodcastReportDto.cs",
+              "RelativeToolTip": "podcasty\\Dtos\\PodcastReportDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T00:14:43.564Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -49,6 +95,10 @@
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
+<<<<<<< HEAD
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+=======
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "20251113165608_kero.cs",
@@ -73,10 +123,21 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-11-13T16:53:14.393Z",
               "EditorCaption": ""
+>>>>>>> 968c047d233a04df635bed67e44c1d22f634293c
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+<<<<<<< HEAD
+              "Title": "AnalyticRepository.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\podcasty\\podcasty\\Repos\\AnalyticRepository.cs",
+              "RelativeDocumentMoniker": "podcasty\\Repos\\AnalyticRepository.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\podcasty\\podcasty\\Repos\\AnalyticRepository.cs",
+              "RelativeToolTip": "podcasty\\Repos\\AnalyticRepository.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAewEQAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T23:56:56.056Z",
+=======
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\CM\\source\\repos\\podcasty\\podcasty\\Program.cs",
               "RelativeDocumentMoniker": "podcasty\\Program.cs",
@@ -98,6 +159,7 @@
               "ViewState": "AgIAADEAAAAAAAAAAAAkwDkAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-13T16:50:50.165Z",
+>>>>>>> 968c047d233a04df635bed67e44c1d22f634293c
               "EditorCaption": ""
             }
           ]

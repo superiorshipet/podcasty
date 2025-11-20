@@ -1,4 +1,5 @@
-﻿using podcasty.Models;
+﻿using podcasty.Dtos;
+using podcasty.Models;
 
 namespace podcasty.Interfaces
 {
@@ -10,5 +11,9 @@ namespace podcasty.Interfaces
         Task<List<Podcast>> GetByCategoryAsync(int categoryId);
         Task<bool> UpdateAsync(Podcast podcast);
         Task<bool> DeleteAsync(int id);
+        bool AdminEdit(int id, PodcastUpdateDto dto);
+        bool SetApprovalStatus(int id, bool approved); 
+
+
     }
 }

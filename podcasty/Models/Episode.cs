@@ -9,6 +9,7 @@ namespace podcasty.Models
         public int PodcastId { get; set; }
         [Required]
         public string Title { get; set; }
+        public bool IsApproved { get; set; } = false;
         public string Description { get; set; }
         [Required]
         public string AudioFile { get; set; }

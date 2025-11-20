@@ -66,7 +66,7 @@ namespace podcasty.Controllers
             episode.AudioFile = dto.AudioFile;
             episode.Duration = dto.Duration;
             episode.EpisodeNumber = dto.EpisodeNumber;
-            episode.PublishedAt = dto.PublishedAt ?? DateTime.UtcNow;
+            episode.PublishedAt = dto.PublishedAt;
             episode.PlayCount = dto.PlayCount;
 
             var ok = await _repo.UpdateAsync(episode);

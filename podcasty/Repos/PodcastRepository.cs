@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using podcasty.Models;
 using podcasty.Interfaces;
+using podcasty.Dtos;
 
 namespace podcasty.Repos
 {
@@ -47,6 +48,28 @@ namespace podcasty.Repos
             if (podcast == null) return false;
             _db.Podcasts.Remove(podcast);
             await _db.SaveChangesAsync();
+            return true;
+        }
+        
+        public bool AdminEdit(int id, PodcastUpdateDto dto)
+        {
+            var podcast =  _db.Podcasts.Find(id);
+            if (podcast == null) return false;
+            podcast.Title = dto.Title;
+            podcast.Description = dto.Description;
+            podcast.Status = dto.Status;
+            podcast.CategoryId = dto.CategoryId;
+            podcast.CoverImage = dto.CoverImage;
+            podcast.UpdatedAt = DateTime.UtcNow;
+            _db.SaveChanges();
+            return true;
+        }
+        public bool SetApprovalStatus(int id, bool approved)
+        {
+            var podcast = _db.Podcasts.FirstOrDefault(p => p.PodcastId == id);
+            if (podcast == null) return false;
+            podcast.IsApproved = approved;
+            _db.SaveChanges();
             return true;
         }
     }

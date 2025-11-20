@@ -15,5 +15,6 @@ namespace podcasty.Models
 
         // Navigation properties
         public virtual ICollection<Podcast> Podcasts { get; set; }
+        public bool IsBanned { get; set; }
     }
 }

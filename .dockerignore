@@ -42,7 +42,7 @@ bld/
 [Bb]in/
 [Oo]bj/
 
-# VS Code directories
+# VS Code directories	
 .vscode/
 
 # Visual Studio cache files
