@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+﻿This is the ROOT .gitignore, it handles Backend (.NET) and IDE files.
+
+The frontend/.gitignore will handle node_modules, etc.
+
+--- Visual Studio / .NET Core ---
+
+[Bb]in/
+[Oo]bj/
+.vs/
+*.suo
+*.user
+*.sln.docstates
+
+--- Rider / JetBrains ---
+
+.idea/
+
+--- OS Specific ---
+
+.DS_Store
+Thumbs.db
+=======
 ﻿.vs/
 bin/
 obj/
@@ -5,3 +28,4 @@ obj/
 *.exe
 *.dll
 *.pdb
+>>>>>>> 98b1a1985c99e529bd51d7af8fb181014a7fc97a
