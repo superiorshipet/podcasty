@@ -16,21 +16,23 @@ export const LoginPromptModal = () => {
   };
 
   return (
-    // --- Overlay ---
+    // --- Overlay (الخلفية) ---
     <div 
       className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 transition-opacity duration-300 ease-in-out"
       onClick={closeLoginModal}
+      aria-modal="true"
+      role="dialog"
     >
-      {/* --- Modal Content --- */}
+      {/* --- Modal Content (المحتوى) --- */}
       <div
         className="bg-white rounded-lg shadow-xl p-8 w-full max-w-md m-4 transform transition-all duration-300 ease-in-out scale-100"
-        onClick={(e) => e.stopPropagation()} 
+        onClick={(e) => e.stopPropagation()} // منع إغلاق النافذة عند الضغط بداخلها
       >
         <h2 className="text-2xl font-bold text-neutral-950 [font-family:'Arimo',Helvetica] mb-4">
           Login Required
         </h2>
         <p className="text-base text-gray-600 [font-family:'Arimo',Helvetica] mb-6">
-          You need to be logged in to use this feature.
+          You need to be logged in to perform this action.
         </p>
         <div className="flex justify-end gap-4">
           <button

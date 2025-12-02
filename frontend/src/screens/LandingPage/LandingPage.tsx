@@ -1,8 +1,8 @@
 import React from "react";
 
-import { Container } from "./Container";
-import { ContainerWrapper } from "./ContainerWrapper";
-import { DivWrapper } from "./DivWrapper";
+import { Container } from "./Container/Container";
+import { ContainerWrapper } from "./ContainerWrapper/ContainerWrapper";
+import { DivWrapper } from "./DivWrapper/DivWrapper";
 
 export const LandingPage = (): JSX.Element => {
   return (

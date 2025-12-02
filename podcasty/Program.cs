@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -30,7 +30,7 @@ internal class Program
         builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
         builder.Services.AddScoped<ISortingRepository, SortingRepository>();
         builder.Services.AddScoped<IFilteringRepository, FilteringRepository>();
-        builder.Services.AddScoped < IPlayHistoryRepository, PlayHistoryRepository>();
+        builder.Services.AddScoped<IPlayHistoryRepository, PlayHistoryRepository>();
         builder.Services.AddScoped<IUserRepository, UserRepository>();
         builder.Services.AddScoped<AppDbContext>();
         builder.Services.AddScoped<ISearchRepository, SearchRepository>();
@@ -44,23 +44,23 @@ internal class Program
         {
             options.SaveToken = true;
             options.TokenValidationParameters = new TokenValidationParameters
-        {
-            ValidateIssuer = true,
-            ValidIssuer = builder.Configuration["JWT:ValidIssuer"],
+            {
+                ValidateIssuer = true,
+                ValidIssuer = builder.Configuration["JWT:ValidIssuer"],
 
-            ValidateAudience = true,
-            ValidAudience = builder.Configuration["JWT:ValidAudience"],
+                ValidateAudience = true,
+                ValidAudience = builder.Configuration["JWT:ValidAudience"],
 
-            ValidateLifetime = true,
+                ValidateLifetime = true,
 
-        
-            ValidateIssuerSigningKey = true,
-            IssuerSigningKey = new SymmetricSecurityKey(
+
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(
             Encoding.UTF8.GetBytes(builder.Configuration["JWT:SecretKey"])
             ),
-        };
+            };
         });
-        builder.Services.AddCors(options => 
+        builder.Services.AddCors(options =>
         {
             options.AddPolicy("txt",
             builder =>

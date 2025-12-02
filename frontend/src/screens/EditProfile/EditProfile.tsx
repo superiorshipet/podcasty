@@ -50,15 +50,12 @@ const TextAreaField = ({ label, id, value, onChange, placeholder = "" }: any) =>
     />
   </div>
 );
-// --- نهاية المكونات الفرعية ---
 
 
 export const EditProfile = (): JSX.Element => {
   const navigate = useNavigate();
-  // (3) جلب المستخدم والدوال من الـ Context
   const { user, updateProfile, changePassword } = useAuth();
 
-  // (4) تعريف الـ State للفورم الأساسي
   const [formData, setFormData] = useState<UpdateUserData>({
     username: "",
     email: "",
@@ -66,33 +63,29 @@ export const EditProfile = (): JSX.Element => {
     avatarUrl: "",
   });
   
-  // (5) تعريف الـ State لفورم كلمة المرور
   const [passData, setPassData] = useState({
     currentPassword: "",
     newPassword: "",
     confirmPassword: "",
   });
 
-  // (6) تعريف حالات التحميل والخطأ (منفصلة لكل فورم)
   const [isProfileLoading, setIsProfileLoading] = useState(false);
   const [profileError, setProfileError] = useState<string | null>(null);
   const [passLoading, setPassLoading] = useState(false);
   const [passError, setPassError] = useState<string | null>(null);
   const [passSuccess, setPassSuccess] = useState<string | null>(null);
 
-  // (7) ملء الفورم ببيانات المستخدم عند تحميل الصفحة
   useEffect(() => {
     if (user) {
       setFormData({
-        username: user.username,
+        username: user.userName,
         email: user.email,
         bio: user.bio,
-        avatarUrl: user.avatarUrl,
+        avatarUrl: user.profilePicture,
       });
     }
-  }, [user]); // سيعمل هذا عند تحميل "user"
+  }, [user]); 
 
-  // دالة موحدة لتحديث الفورم
   const handleProfileChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
@@ -100,7 +93,6 @@ export const EditProfile = (): JSX.Element => {
     });
   };
   
-  // دالة موحدة لتحديث فورم كلمة المرور
   const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPassData({
       ...passData,
@@ -108,14 +100,13 @@ export const EditProfile = (): JSX.Element => {
     });
   };
 
-  // (8) دالة إرسال تحديث البروفايل
   const handleProfileSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsProfileLoading(true);
     setProfileError(null);
     try {
       await updateProfile(formData);
-      navigate("/profile"); // بعد النجاح، اذهب للبروفايل
+      navigate("/profile"); 
     } catch (err: any) {
       setProfileError(err.message || "Failed to update profile.");
     } finally {
@@ -123,7 +114,6 @@ export const EditProfile = (): JSX.Element => {
     }
   };
 
-  // (9) دالة إرسال تغيير كلمة المرور
   const handleChangePasswordSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (passData.newPassword !== passData.confirmPassword) {
@@ -139,7 +129,6 @@ export const EditProfile = (): JSX.Element => {
         newPassword: passData.newPassword,
       });
       setPassSuccess("Password changed successfully!");
-      // مسح حقول كلمة المرور
       setPassData({ currentPassword: "", newPassword: "", confirmPassword: "" });
     } catch (err: any) {
       setPassError(err.message || "Failed to change password.");
@@ -148,14 +137,12 @@ export const EditProfile = (): JSX.Element => {
     }
   };
 
-  // (10) التأكد من أن "user" قد تم تحميله
   if (!user) {
     return <div className="w-full text-center [font-family:'Arimo',Helvetica] pt-10">Loading profile...</div>;
   }
 
   return (
     <div className="bg-white overflow-x-hidden w-full min-h-screen relative">
-      {/* (11) تم حذف الـ Navbar المكرر من هنا */}
 
       {/* --- Main Content --- */}
       <main className="flex flex-col w-full max-w-3xl mx-auto items-start gap-8 pb-12 px-4">

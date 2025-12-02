@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
-import { SignupData } from "../../types"; // <-- (1) استدعاء الـ Type الجديد
+import { SignupData } from "../../types";
 
 export const Signup = () => {
   const navigate = useNavigate();
-  const { signup, isLoading } = useAuth(); 
+  const { signup } = useAuth(); 
 
-  // (2) تحديث الـ State ليحتوي على الحقول الجديدة
-  const [formData, setFormData] = useState<SignupData>({
+  const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     username: "",
@@ -17,8 +16,8 @@ export const Signup = () => {
   });
   
   const [error, setError] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
 
-  // دالة موحدة لتحديث الفورم
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
       ...formData,
@@ -29,29 +28,59 @@ export const Signup = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
+    setIsLoading(true);
 
-    // (3) التحقق من الحقول الجديدة
-    if (!formData.firstName || !formData.lastName || !formData.username || !formData.email || !formData.password) {
-      setError("Please fill in all fields.");
-      return;
-    }
-    if (formData.password.length < 8) {
-      setError("Password must be at least 8 characters.");
+    if (!formData.username || !formData.email || !formData.password) {
+      setError("Username, Email, and Password are required.");
+      setIsLoading(false);
       return;
     }
 
     try {
-      // (4) إرسال الأوبجكت المكتمل
-      await signup(formData); 
-      navigate("/profile"); // بعد النجاح، اذهب للبروفايل
+      const apiData: SignupData = {
+        userName: formData.username,
+        email: formData.email,
+        password: formData.password
+      };
+      
+      await signup(apiData);
+      navigate("/profile");
     } catch (err: any) {
-      setError(err.message || "Failed to create account.");
+      console.log("Error details:", err); // للمساعدة في التشخيص
+      let displayMessage = "Registration failed.";
+
+      // الحالة 1: الخطأ وصل كمصفوفة مباشرة (نادر الحدوث مع throw new Error)
+      if (Array.isArray(err)) {
+        displayMessage = err.map((e: any) => e.description).join(', ');
+      }
+      // الحالة 2: الخطأ هو كائن Error وله رسالة
+      else if (err && err.message) {
+        // هنا يكمن الحل: نحاول تحويل النص إلى JSON
+        try {
+          // نحاول فك تشفير النص لنرى هل هو مصفوفة أخطاء مخفية؟
+          const parsedError = JSON.parse(err.message);
+          
+          if (Array.isArray(parsedError) && parsedError.length > 0 && parsedError[0].description) {
+             // نعم، إنه مصفوفة أخطاء Identity
+             displayMessage = parsedError.map((e: any) => e.description).join(', ');
+          } else {
+             // لا، إنه JSON عادي أو نص آخر
+             displayMessage = err.message;
+          }
+        } catch (e) {
+          // فشل التحويل، إذًا هو خطأ نصي عادي (مثل "Network Error")
+          displayMessage = err.message;
+        }
+      }
+      
+      setError(displayMessage);
+    } finally {
+      setIsLoading(false);
     }
   };
-
   return (
     <div className="bg-white w-full min-h-screen flex items-center justify-center pt-12">
-      <div className="flex flex-col w-full max-w-md items-start gap-6 p-6 bg-white rounded-lg border-[0.8px] border-solid border-[#0000001a] shadow-md m-4">
+      <div className="flex flex-col w-[446px] items-start gap-6 p-6 bg-white rounded-lg border-[0.8px] border-solid border-[#0000001a] shadow-md">
         
         <header className="w-full">
           <h1 className="[font-family:'Arimo',Helvetica] font-normal text-neutral-950 text-xl tracking-[0] leading-4">
@@ -62,136 +91,44 @@ export const Signup = () => {
           </p>
         </header>
 
-        <form
-          className="flex flex-col w-full items-start gap-4"
-          onSubmit={handleSubmit}
-        >
-          {/* --- (5) إضافة حقل First Name --- */}
-          <div className="flex-col h-auto items-start self-stretch w-full flex relative">
-            <label
-              className="[font-family:'Arimo',Helvetica] font-normal text-neutral-950 text-sm mb-1"
-              htmlFor="firstName"
-            >
-              First Name
-            </label>
-            <input
-              className="h-9 px-3 py-1 relative self-stretch w-full bg-[#f3f3f5] rounded-lg border-[0.8px] border-solid border-transparent [font-family:'Arimo',Helvetica] font-normal text-sm"
-              id="firstName"
-              name="firstName"
-              placeholder="John"
-              type="text"
-              value={formData.firstName}
-              onChange={handleChange}
-              required
-            />
+        <form className="flex flex-col w-full items-start gap-4" onSubmit={handleSubmit}>
+          
+          <div className="flex gap-2 w-full">
+             <div className="flex-col h-auto items-start w-1/2 flex relative">
+                <label className="text-sm mb-1">First Name</label>
+                <input className="h-9 px-3 w-full bg-[#f3f3f5] rounded-lg text-sm" name="firstName" value={formData.firstName} onChange={handleChange} />
+             </div>
+             <div className="flex-col h-auto items-start w-1/2 flex relative">
+                <label className="text-sm mb-1">Last Name</label>
+                <input className="h-9 px-3 w-full bg-[#f3f3f5] rounded-lg text-sm" name="lastName" value={formData.lastName} onChange={handleChange} />
+             </div>
           </div>
 
-          {/* --- (6) إضافة حقل Last Name --- */}
           <div className="flex-col h-auto items-start self-stretch w-full flex relative">
-            <label
-              className="[font-family:'Arimo',Helvetica] font-normal text-neutral-950 text-sm mb-1"
-              htmlFor="lastName"
-            >
-              Last Name
-            </label>
-            <input
-              className="h-9 px-3 py-1 relative self-stretch w-full bg-[#f3f3f5] rounded-lg border-[0.8px] border-solid border-transparent [font-family:'Arimo',Helvetica] font-normal text-sm"
-              id="lastName"
-              name="lastName"
-              placeholder="Doe"
-              type="text"
-              value={formData.lastName}
-              onChange={handleChange}
-              required
-            />
+            <label className="text-sm mb-1">Username</label>
+            <input className="h-9 px-3 w-full bg-[#f3f3f5] rounded-lg text-sm" name="username" value={formData.username} onChange={handleChange} required />
           </div>
 
-          {/* --- حقل Username --- */}
           <div className="flex-col h-auto items-start self-stretch w-full flex relative">
-            <label
-              className="[font-family:'Arimo',Helvetica] font-normal text-neutral-950 text-sm mb-1"
-              htmlFor="username"
-            >
-              Username
-            </label>
-            <input
-              className="h-9 px-3 py-1 relative self-stretch w-full bg-[#f3f3f5] rounded-lg border-[0.8px] border-solid border-transparent [font-family:'Arimo',Helvetica] font-normal text-sm"
-              id="username"
-              name="username"
-              placeholder="johndoe"
-              type="text"
-              value={formData.username}
-              onChange={handleChange}
-              required
-            />
+            <label className="text-sm mb-1">Email</label>
+            <input className="h-9 px-3 w-full bg-[#f3f3f5] rounded-lg text-sm" name="email" type="email" value={formData.email} onChange={handleChange} required />
           </div>
 
-          {/* --- حقل Email --- */}
           <div className="flex-col h-auto items-start self-stretch w-full flex relative">
-            <label
-              className="[font-family:'Arimo',Helvetica] font-normal text-neutral-950 text-sm mb-1"
-              htmlFor="email"
-            >
-              Email
-            </label>
-            <input
-              className="h-9 px-3 py-1 relative self-stretch w-full bg-[#f3f3f5] rounded-lg border-[0.8px] border-solid border-transparent [font-family:'Arimo',Helvetica] font-normal text-sm"
-              id="email"
-              name="email"
-              placeholder="you@example.com"
-              type="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
+            <label className="text-sm mb-1">Password</label>
+            <input className="h-9 px-3 w-full bg-[#f3f3f5] rounded-lg text-sm" name="password" type="password" value={formData.password} onChange={handleChange} required />
           </div>
 
-          {/* --- حقل Password --- */}
-          <div className="flex-col h-auto items-start self-stretch w-full flex relative">
-            <label
-              className="[font-family:'Arimo',Helvetica] font-normal text-neutral-950 text-sm mb-1"
-              htmlFor="password"
-            >
-              Password
-            </label>
-            <input
-              className="h-9 px-3 py-1 relative self-stretch w-full bg-[#f3f3f5] rounded-lg border-[0.8px] border-solid border-transparent [font-family:'Arimo',Helvetica] font-normal text-sm"
-              id="password"
-              name="password"
-              placeholder="••••••••"
-              type="password"
-              value={formData.password}
-              onChange={handleChange}
-              required
-              minLength={8}
-            />
-          </div>
+          {error && <div className="text-red-500 text-sm">{error}</div>}
 
-          {/* --- Error Message --- */}
-          {error && (
-            <div className="text-red-500 text-sm [font-family:'Arimo',Helvetica]">
-              {error}
-            </div>
-          )}
-
-          <button
-            type="submit"
-            disabled={isLoading}
-            className="all-[unset] box-border bg-[#030213] relative self-stretch w-full h-9 rounded-lg text-white text-center [font-family:'Arimo',Helvetica] disabled:opacity-50 transition-opacity hover:bg-opacity-90"
-          >
+          <button type="submit" disabled={isLoading} className="all-[unset] box-border bg-[#030213] relative self-stretch w-full h-9 rounded-lg text-white text-center cursor-pointer disabled:opacity-50">
             {isLoading ? "Creating Account..." : "Sign Up"}
           </button>
         </form>
 
         <div className="relative self-stretch w-full h-5 text-center">
-          <p className="[font-family:'Arimo',Helvetica] font-normal text-[#495565] text-sm">
-            Already have an account?{" "}
-            <button
-              onClick={() => navigate("/login")}
-              className="[font-family:'Arimo',Helvetica] font-normal text-[#155cfb] text-sm hover:underline"
-            >
-              Login
-            </button>
+          <p className="text-[#495565] text-sm">
+            Already have an account? <button onClick={() => navigate("/login")} className="text-[#155cfb]">Login</button>
           </p>
         </div>
       </div>
