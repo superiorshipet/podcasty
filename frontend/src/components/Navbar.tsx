@@ -43,13 +43,23 @@ export const Navbar = () => {
         <div className="flex items-center gap-4 relative">
           {user ? (
             <>
+              {/* 🏆 Admin Dashboard Button (Only for Admins) */}
+              {user.role === "Admin" && (
+                <button
+                  onClick={() => navigate("/admin")}
+                  className="all-[unset] box-border relative h-9 px-4 rounded-lg cursor-pointer bg-red-50 text-red-600 font-bold text-sm hover:bg-red-100 transition-colors"
+                >
+                  Admin Dashboard
+                </button>
+              )}
+
               <button
                 className="all-[unset] box-border relative h-9 px-4 rounded-lg cursor-pointer"
                 type="button"
                 aria-label="Go to My Library"
-                // onClick={() => navigate("/library")}
+                onClick={() => navigate("/library")}
               >
-                <span className="[font-family:'Arimo-Regular',Helvetica] font-normal text-neutral-950 text-sm tracking-[0] leading-5 whitespace-nowTwrap">
+                <span className="[font-family:'Arimo-Regular',Helvetica] font-normal text-neutral-950 text-sm tracking-[0] leading-5 whitespace-nowrap">
                   My Library
                 </span>
               </button>
@@ -62,7 +72,8 @@ export const Navbar = () => {
                 <div className="flex h-10 items-start relative self-stretch w-full rounded-full overflow-hidden">
                   <div className="flex h-10 items-center justify-center relative flex-1 grow bg-[#ececf0] rounded-full">
                     <span className="relative w-fit [font-family:'Arimo-Regular',Helvetica] font-normal text-neutral-950 text-base tracking-[0] leading-6 whitespace-nowrap">
-                      {user.initial || "P"}
+                      {/* Check if user name exists, otherwise fallback */}
+                      {user.initial || (user.userName ? user.userName[0].toUpperCase() : "P")}
                     </span>
                   </div>
                 </div>

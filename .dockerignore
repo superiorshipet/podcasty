@@ -27,6 +27,9 @@ README.md
 !.git/HEAD
 !.git/config
 !.git/packed-refs
+<<<<<<< HEAD
+!.git/refs/heads/**
+=======
 !.git/refs/heads/**
 *.suo
 *.user
@@ -42,7 +45,7 @@ bld/
 [Bb]in/
 [Oo]bj/
 
-# VS Code directories	
+# VS Code directories
 .vscode/
 
 # Visual Studio cache files
@@ -51,3 +54,4 @@ bld/
 *.pdb
 *.dll
 *.exe
+>>>>>>> 98b1a1985c99e529bd51d7af8fb181014a7fc97a

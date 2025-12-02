@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext"; 
 
-// (1) Translated Tabs to English
 type TabData = { id: string; title: string; content: string };
 const tabsData: TabData[] = [
   { id: "listening", title: "Listening History", content: "No listening history yet." },
@@ -15,9 +14,7 @@ export const Profile = (): JSX.Element => {
   const { user } = useAuth(); 
   const [activeTab, setActiveTab] = useState<string>(tabsData[0].id);
   
-  // (2) Removed the hasPodcasts logic, it's no longer needed here.
   
-  // (3) Simplified click handler
   const handleMyPodcastsClick = () => {
     navigate("/creator/dashboard");
   };
@@ -42,8 +39,8 @@ export const Profile = (): JSX.Element => {
             className="flex w-24 h-24 items-center justify-center flex-shrink-0 bg-[#ececf0] rounded-full overflow-hidden"
             aria-hidden="true"
           >
-            {user.avatarUrl ? (
-                <img src={user.avatarUrl} alt="Profile" className="w-full h-full object-cover" />
+            {user.profilePicture ? (
+                <img src={user.profilePicture} alt="Profile" className="w-full h-full object-cover" />
             ) : (
                 <span className="[font-family:'Arimo-Regular',Helvetica] font-normal text-neutral-950 text-2xl tracking-[0] leading-8">
                   {user.initial}
@@ -53,7 +50,7 @@ export const Profile = (): JSX.Element => {
           
           <div className="flex flex-col items-center md:items-start md:ml-6 mt-4 md:mt-0">
             <h2 className="[font-family:'Arimo-Regular',Helvetica] font-bold text-neutral-950 text-2xl tracking-[0] leading-6">
-              {user.username}
+              {user.userName}
             </h2>
             <p className="mt-2 [font-family:'Arimo-Regular',Helvetica] font-normal text-[#495565] text-base tracking-[0] leading-6">
               {user.bio || "No bio available."}

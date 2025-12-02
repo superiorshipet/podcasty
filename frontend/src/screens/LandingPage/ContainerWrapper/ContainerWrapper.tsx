@@ -1,33 +1,26 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Podcast } from "../../../types";
-import { useAuth } from "../../../contexts/AuthContext"; 
-
-// (Popular Podcasts Section) - Refactored for API, Polish, & Guest Mode
+import { api } from "../../../services/api"; 
 
 const PodcastCardSmall = ({ podcast }: { podcast: Podcast }) => {
   const navigate = useNavigate();
-  const { user, openLoginModal } = useAuth(); 
-
-  const handleClick = () => {
-    if (!user) {
-      openLoginModal(); 
-    } else {
-      navigate(`/podcast/${podcast.id}`);
-    }
-  };
+  
+  const imageSrc = podcast.coverImage || "https://placehold.co/165x165?text=No+Image";
+  
+  const authorName = podcast.creator?.userName || "Unknown Creator";
 
   return (
     <article
-      onClick={handleClick}
+      onClick={() => navigate(`/podcast/${podcast.podcastId}`)} 
       className="flex flex-col w-full h-[270px] items-start gap-4 bg-white rounded-[14px] overflow-hidden 
                  border-[0.8px] border-solid border-[#0000001a] cursor-pointer
-                 transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-1" 
+                 transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-1"
     >
       <div className="h-[164px] bg-gray-100 relative w-full">
         <img
           className="w-full h-full object-cover"
-          src={podcast.imageUrl}
+          src={imageSrc}
           alt={`${podcast.title} cover`}
         />
       </div>
@@ -36,13 +29,12 @@ const PodcastCardSmall = ({ podcast }: { podcast: Podcast }) => {
           {podcast.title}
         </h3>
         <p className="[font-family:'Arimo',Helvetica] font-normal text-[#495565] text-sm tracking-[0] leading-5 whitespace-nowrap truncate w-full">
-          {podcast.author}
+          {authorName}
         </p>
       </div>
     </article>
   );
 };
-
 
 export const ContainerWrapper = (): JSX.Element => {
   const navigate = useNavigate();
@@ -50,20 +42,19 @@ export const ContainerWrapper = (): JSX.Element => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // --- جلب بيانات وهمية ---
     const fetchPopular = async () => {
       setIsLoading(true);
-      await new Promise(res => setTimeout(res, 1000)); // محاكاة تحميل
-      setPodcasts([
-        { id: "1", title: "Tech Talks Daily", author: "johndoe", imageUrl: "https://placehold.co/165x165/222/FFF?text=Tech", description: "" },
-        { id: "2", title: "Business Minds", author: "sarahsmith", imageUrl: "https://placehold.co/165x165/444/FFF?text=Business", description: "" },
-        { id: "3", title: "Wellness Hour", author: "johndoe", imageUrl: "https://placehold.co/165x165/666/FFF?text=Wellness", description: "" },
-        { id: "4", title: "Future Learning", author: "sarahsmith", imageUrl: "https://placehold.co/165x165/888/FFF?text=Learning", description: "" },
-        { id: "5", title: "Cinema Secrets", author: "johndoe", imageUrl: "https://placehold.co/165x165/AAA/FFF?text=Cinema", description: "" },
-        { id: "6", title: "Science Unveiled", author: "sarahsmith", imageUrl: "https://placehold.co/165x165/CCC/000?text=Science", description: "" },
-      ]);
-      setIsLoading(false);
+      try {
+        const allPodcasts = await api.podcasts.getAll();
+        
+        setPodcasts(Array.isArray(allPodcasts) ? allPodcasts.slice(0, 6) : []);
+      } catch (error) {
+        console.error("Failed to load popular podcasts", error);
+      } finally {
+        setIsLoading(false);
+      }
     };
+    
     fetchPopular();
   }, []);
 
@@ -79,20 +70,23 @@ export const ContainerWrapper = (): JSX.Element => {
           onClick={() => navigate("/browse")}
           className="all-[unset] box-border flex w-fit items-center justify-center gap-2 px-4 py-2 h-9 relative rounded-lg 
                      [font-family:'Arimo',Helvetica] font-normal text-neutral-950 text-sm tracking-[0] leading-5
-                     transition-all duration-200 ease-in-out hover:bg-gray-100" // <-- إضافة Hover
+                     transition-all duration-200 ease-in-out hover:bg-gray-100"
         >
           View All
         </button>
       </div>
 
       {isLoading ? (
-        <div className="w-full text-center [font-family:'Arimo',Helvetica]">Loading popular podcasts...</div>
-      ) : (
-        // (7) تعديل: أصبح Grid مرن (responsive)
+        <div className="w-full text-center py-10 [font-family:'Arimo',Helvetica]">Loading...</div>
+      ) : podcasts.length > 0 ? (
         <div className="self-stretch w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5">
           {podcasts.map((podcast) => (
-            <PodcastCardSmall key={podcast.id} podcast={podcast} />
+            <PodcastCardSmall key={podcast.podcastId} podcast={podcast} />
           ))}
+        </div>
+      ) : (
+        <div className="w-full text-center py-10 text-gray-500 [font-family:'Arimo',Helvetica]">
+          No podcasts found. Go to Dashboard to create one!
         </div>
       )}
     </div>

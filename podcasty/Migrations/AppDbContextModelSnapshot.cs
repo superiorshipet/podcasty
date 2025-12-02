@@ -229,6 +229,9 @@ namespace podcasty.Migrations
                     b.Property<int?>("EpisodeNumber")
                         .HasColumnType("int");
 
+                    b.Property<bool>("IsApproved")
+                        .HasColumnType("bit");
+
                     b.Property<int>("PlayCount")
                         .HasColumnType("int");
 
@@ -310,6 +313,12 @@ namespace podcasty.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("IsApproved")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("PlayCount")
+                        .HasColumnType("int");
+
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
@@ -355,6 +364,9 @@ namespace podcasty.Migrations
                         .HasColumnType("nvarchar(256)");
 
                     b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsBanned")
                         .HasColumnType("bit");
 
                     b.Property<bool>("LockoutEnabled")

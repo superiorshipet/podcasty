@@ -7,34 +7,40 @@ using System.Security.Claims;
 
 namespace podcasty.Controllers
 {
-    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class PodcastsController : ControllerBase
     {
         private readonly IPodcastRepository _repo;
         private readonly ICategoryRepository _categoryRepo;
-        public PodcastsController(IPodcastRepository repo) => _repo = repo;
+
+        public PodcastsController(IPodcastRepository repo, ICategoryRepository categoryRepo)
+        {
+            _repo = repo;
+            _categoryRepo = categoryRepo;
+        }
 
         [HttpPost]
-        [Authorize]
+        [Authorize] 
         public async Task<IActionResult> Create([FromBody] PodcastCreateDto dto)
         {
             var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+
             var categoryExists = await _categoryRepo.ExistsAsync(dto.CategoryId);
             if (!categoryExists)
                 return BadRequest("Invalid CategoryId: The category does not exist.");
+
             var podcast = new Podcast
             {
                 Title = dto.Title,
                 Description = dto.Description,
                 CategoryId = dto.CategoryId,
                 CoverImage = dto.CoverImage,
-                CreatorId = userId // server sets the creator!
+                CreatorId = userId 
             };
 
             await _repo.AddAsync(podcast);
-            return Ok(podcast); // or return Created, etc.
+            return Ok(podcast);
         }
 
         [HttpGet("{id}")]
@@ -53,14 +59,16 @@ namespace podcasty.Controllers
             => Ok(await _repo.GetByCategoryAsync(categoryId));
 
         [HttpPut("{id}")]
-        [Authorize]
+        [Authorize] 
         public async Task<IActionResult> Update(int id, [FromBody] PodcastUpdateDto dto)
         {
             var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var podcast = await _repo.GetByIdAsync(id);
             if (podcast == null) return NotFound();
+
             if (podcast.CreatorId.ToString() != userId)
                 return Forbid("Only the creator can update this podcast.");
+
             var updated = new Podcast
             {
                 PodcastId = id,
@@ -74,7 +82,7 @@ namespace podcasty.Controllers
             return ok ? Ok("updated") : NotFound();
         }
 
-        [Authorize]
+        [Authorize] 
         [HttpDelete("{podcastId}")]
         public async Task<IActionResult> Delete(int podcastId)
         {
@@ -82,13 +90,11 @@ namespace podcasty.Controllers
             var podcast = await _repo.GetByIdAsync(podcastId);
             if (podcast == null) return NotFound();
 
-            // Only the creator can delete this podcast
             if (podcast.CreatorId.ToString() != userId)
                 return Forbid("Only the creator can delete this podcast.");
 
             var ok = await _repo.DeleteAsync(podcastId);
             return ok ? Ok("deleted") : NotFound();
         }
-
     }
 }

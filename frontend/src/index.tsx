@@ -3,21 +3,21 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 
-// (1) استدعاء الـ Providers التي أنشأناها
 import { AuthProvider } from "./contexts/AuthContext";
-import { PlayerProvider } from "./contexts/PlayerContext";
+import { PlayerProvider } from "./contexts/PlayerContext"; // استدعاء مزود مشغل الصوت
 
-// (2) حذف الأقواس الفارغة التي كانت موجودة
 createRoot(document.getElementById("app") as HTMLElement).render(
   <StrictMode>
-    {/* (3) تغليف التطبيق بالكامل بالـ Providers */}
-    {/* هذا يضمن أن أي Component (مثل Navbar) يمكنه الوصول لبيانات المستخدم والصوت */}
-    <AuthProvider>
-      <PlayerProvider>
+    {/* (هام) قمنا بقلب الترتيب 
+      PlayerProvider يغلف AuthProvider
+      هذا يسمح للـ AuthContext باستهلاك (use) الـ PlayerContext
+    */}
+    <PlayerProvider>
+      <AuthProvider>
         <BrowserRouter>
           <App />
         </BrowserRouter>
-      </PlayerProvider>
-    </AuthProvider>
+      </AuthProvider>
+    </PlayerProvider>
   </StrictMode>
 );

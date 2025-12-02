@@ -1,18 +1,16 @@
 import React, { createContext, useContext, useState, ReactNode, useEffect } from "react";
-// (1) استدعاء الأنواع الجديدة
 import { User, LoginData, SignupData, UpdateUserData, PasswordChangeData } from "../types";
+import { usePlayer } from "./PlayerContext"; 
+import { api } from "../services/api";
 
-// (2) تحديث الـ Type
 interface AuthContextType {
   user: User | null;
   isLoading: boolean;
   login: (data: LoginData) => Promise<void>;
-  signup: (data: SignupData) => Promise<void>; // <-- تعديل
+  signup: (data: SignupData) => Promise<void>;
   logout: () => void;
   updateProfile: (data: UpdateUserData) => Promise<void>;
   changePassword: (data: PasswordChangeData) => Promise<void>;
-  
-  // (State للـ Modal)
   isLoginModalOpen: boolean;
   openLoginModal: () => void;
   closeLoginModal: () => void;
@@ -20,133 +18,102 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
+function parseJwt(token: string) {
+    try {
+        if (!token || token.split('.').length !== 3) return null;
+
+        var base64Url = token.split('.')[1];
+        var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+        var jsonPayload = decodeURIComponent(window.atob(base64).split('').map(function(c) {
+            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+        }).join(''));
+        return JSON.parse(jsonPayload);
+    } catch (e) {
+        return null;
+    }
+}
+
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<User | null>(null);
-  const [isLoading, setIsLoading] = useState(true); // (مهم للـ Protected Routes)
+  const [isLoading, setIsLoading] = useState(true); 
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const { clearPlayer } = usePlayer();
 
-  // (محاكاة) التحقق من الـ Token عند بدء تشغيل التطبيق
+  const openLoginModal = () => setIsLoginModalOpen(true);
+  const closeLoginModal = () => setIsLoginModalOpen(false);
+
   useEffect(() => {
-    const checkUser = async () => {
-      // const token = localStorage.getItem("token");
-      // if (token) {
-      //   try {
-      //     // const apiUser = await fetch("/api/me", { headers: { 'Authorization': `Bearer ${token}` }});
-      //     // setUser(apiUser.json());
-      //   } catch (e) {
-      //     localStorage.removeItem("token");
-      //   }
-      // }
-      setIsLoading(false);
-    };
-    checkUser();
+    const token = localStorage.getItem("podcasty_token");
+    if (token && token !== "undefined" && token !== "null") {
+        const decoded = parseJwt(token);
+        if (decoded) {
+            setUser({
+                id: parseInt(decoded["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"] || decoded.nameid || decoded.sub),
+                userName: decoded["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"] || decoded.unique_name || decoded.name,
+                email: "", 
+                role: decoded["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"] || decoded.role,
+                token: token
+            });
+        } else {
+            localStorage.removeItem("podcasty_token");
+        }
+    }
+    setIsLoading(false);
   }, []);
 
-  // --- دوال الـ Auth ---
-
   const login = async (data: LoginData) => {
-    console.log("Login attempt with:", data.email);
-    // (محاكاة) استدعاء الـ API
-    await new Promise((res) => setTimeout(res, 1000));
-
-    // (محاكاة) خطأ في الدخول
-    if (data.password === "wrong") {
-      throw new Error("Invalid email or password.");
+    const response = await api.auth.login(data);
+    
+    let token = null;
+    
+    if (response && typeof response === 'object') {
+        token = response.token || response.Token;
+    } else if (typeof response === 'string') {
+        token = response;
     }
 
-    // (محاكاة) نجاح الدخول
-    const mockUser: User = {
-      id: "user-123",
-      username: "userTest",
-      email: data.email,
-      firstName: "user", // <-- بيانات وهمية
-      lastName: "test",  // <-- بيانات وهمية
-      initial: "J",     // <-- بيانات وهمية
-      bio: "This is a mock bio.",
-      avatarUrl: ""
-    };
-
-    setUser(mockUser);
-    // localStorage.setItem("token", "mock-token-12345");
-    console.log("Login successful");
+    if (token) {
+        localStorage.setItem("podcasty_token", token);
+        const decoded = parseJwt(token);
+        if (decoded) {
+            setUser({
+                id: parseInt(decoded["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"] || decoded.nameid || decoded.sub),
+                userName: decoded["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"] || decoded.unique_name || decoded.name,
+                email: data.userName, 
+                role: decoded["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"] || decoded.role,
+                token: token
+            });
+        }
+    } else {
+        throw new Error("Login failed: Invalid response from server.");
+    }
   };
 
-  const signup = async (data: SignupData) => { // <-- (3) تعديل الدالة
-    console.log("Signup attempt with:", data);
-    // (محاكاة) استدعاء الـ API
-    await new Promise((res) => setTimeout(res, 1000));
-
-    // (محاكاة) خطأ (الإيميل مستخدم)
-    if (data.email === "used@example.com") {
-      throw new Error("This email is already in use.");
-    }
-
-    // (محاكاة) نجاح التسجيل
-    const newUser: User = {
-      id: `user-${Math.floor(Math.random() * 1000)}`, // (من الـ API)
-      username: data.username,
-      email: data.email,
-      firstName: data.firstName, // <-- (4) استخدام البيانات الجديدة
-      lastName: data.lastName,   // <-- (4) استخدام البيانات الجديدة
-      initial: data.firstName[0].toUpperCase(), // <-- (5) Initial ذكي
-      bio: `Welcome to Podstream, ${data.firstName}!`,
-      avatarUrl: ""
-    };
-
-    setUser(newUser);
-    // localStorage.setItem("token", "mock-token-54321");
-    console.log("Signup successful");
+  const signup = async (data: SignupData) => {
+    await api.auth.register(data);
+    await login({ userName: data.userName, password: data.password });
   };
 
   const logout = () => {
-    console.log("Logging out");
+    localStorage.removeItem("podcasty_token");
     setUser(null);
-    // localStorage.removeItem("token");
-    // (يمكن إضافة navigate("/") هنا إذا أردت)
+    clearPlayer();
   };
 
   const updateProfile = async (data: UpdateUserData) => {
     if (!user) return;
-    console.log("Updating profile with:", data);
-    await new Promise((res) => setTimeout(res, 1000));
-
-    // (محاكاة) تحديث المستخدم
-    const updatedUser = { ...user, ...data };
-    setUser(updatedUser);
-    console.log("Profile updated");
+    await api.profile.update(data);
+    setUser({ ...user, ...data } as User);
   };
   
   const changePassword = async (data: PasswordChangeData) => {
-    console.log("Changing password...");
-    await new Promise((res) => setTimeout(res, 1000));
-
-    if (data.currentPassword === "wrong") {
-      throw new Error("Incorrect current password.");
-    }
-    
-    console.log("Password changed successfully");
-    // (لا نحتاج لتحديث الـ state هنا)
   };
-
-
-  // --- دوال الـ Modal ---
-  const openLoginModal = () => setIsLoginModalOpen(true);
-  const closeLoginModal = () => setIsLoginModalOpen(false);
-
 
   return (
     <AuthContext.Provider
       value={{
-        user,
-        isLoading,
-        login,
-        signup,
-        logout,
-        updateProfile,
-        changePassword,
-        isLoginModalOpen,
-        openLoginModal,
-        closeLoginModal,
+        user, isLoading, login, signup, logout, updateProfile, changePassword,
+        isLoginModalOpen, openLoginModal, closeLoginModal,
       }}
     >
       {!isLoading && children}
@@ -156,8 +123,6 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
 export const useAuth = () => {
   const context = useContext(AuthContext);
-  if (context === undefined) {
-    throw new Error("useAuth must be used within an AuthProvider");
-  }
+  if (context === undefined) throw new Error("useAuth must be used within an AuthProvider");
   return context;
 };

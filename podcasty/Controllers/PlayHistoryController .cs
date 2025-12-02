@@ -14,15 +14,13 @@ namespace podcasty.Controllers
     public class PlayHistoryController : ControllerBase
     {
         private readonly IPlayHistoryRepository _repo;
-        private readonly IEpisodeRepository _episodeRepo; // Optional: for episode details
-
+        private readonly IEpisodeRepository _episodeRepo; 
         public PlayHistoryController(IPlayHistoryRepository repo, IEpisodeRepository episodeRepo)
         {
             _repo = repo;
             _episodeRepo = episodeRepo;
         }
 
-        // Add new play history
         [HttpPost]
         public async Task<IActionResult> Add([FromBody] PlayHistoryCreateDto dto)
         {
@@ -40,11 +38,10 @@ namespace podcasty.Controllers
                 ProgressSeconds = hist.ProgressSeconds,
                 Completed = hist.Completed,
                 LastPlayed = hist.LastPlayed,
-                EpisodeTitle = episode?.Title // Show title if available
+                EpisodeTitle = episode?.Title 
             });
         }
 
-        // Update existing play history
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] PlayHistoryCreateDto dto)
         {
@@ -68,7 +65,6 @@ namespace podcasty.Controllers
             });
         }
 
-        // Delete a play history record
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
@@ -79,7 +75,6 @@ namespace podcasty.Controllers
             return Ok("Deleted.");
         }
 
-        // Get all play history for this user
         [HttpGet("mine")]
         public async Task<IActionResult> GetMine()
         {
