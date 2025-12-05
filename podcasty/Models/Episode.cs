@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
+
 namespace podcasty.Models
 {
     public class Episode
@@ -20,6 +22,8 @@ namespace podcasty.Models
         [Required]
         public string AudioFile { get; set; }
 
+        public string? CoverImage { get; set; }
+
         public int? Duration { get; set; }
 
         public int? EpisodeNumber { get; set; }
@@ -28,6 +32,7 @@ namespace podcasty.Models
 
         public DateTime PublishedAt { get; set; } = DateTime.UtcNow;
 
+        [JsonIgnore]
         public virtual Podcast Podcast { get; set; }
     }
 }

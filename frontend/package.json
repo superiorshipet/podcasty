@@ -5,24 +5,24 @@
     "source": "./index.html",
     "type": "module",
     "scripts": {
-      "dev": "vite",
-      "build": "vite build"
+        "dev": "vite",
+        "build": "vite build"
     },
     "dependencies": {
-      "react": "^18.2.0",
-      "react-dom": "^18.2.0",
-      "react-router-dom": "^6.8.1",
-      "tailwindcss-animate": "1.0.7"
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-router-dom": "^6.8.1",
+        "tailwindcss-animate": "1.0.7"
     },
     "devDependencies": {
-      "@animaapp/vite-plugin-screen-graph": "^0.1.5",
-      "@types/react": "18.2.0",
-      "@types/react-dom": "18.2.0",
-      "@vitejs/plugin-react": "4.3.4",
-      "esbuild": "0.24.0",
-      "globals": "15.12.0",
-      "tailwindcss": "3.4.16",
-      "vite": "6.0.4"
+        "@animaapp/vite-plugin-screen-graph": "^0.1.5",
+        "@types/node": "^24.10.1",
+        "@types/react": "18.2.0",
+        "@types/react-dom": "18.2.0",
+        "@vitejs/plugin-react": "4.3.4",
+        "esbuild": "0.24.0",
+        "globals": "15.12.0",
+        "tailwindcss": "3.4.16",
+        "vite": "6.0.4"
     }
-  }
-  
+}

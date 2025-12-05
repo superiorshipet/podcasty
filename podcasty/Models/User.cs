@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using podcasty.Enums;
+using System.Text.Json.Serialization;
 
 namespace podcasty.Models
 {
@@ -14,6 +15,7 @@ namespace podcasty.Models
         public DateTime UpdatedAt { get; set; }
 
         // Navigation properties
+        [JsonIgnore]
         public virtual ICollection<Podcast> Podcasts { get; set; }
         public bool IsBanned { get; set; }
     }

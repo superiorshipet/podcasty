@@ -2,9 +2,6 @@
 using podcasty.Dtos;
 using podcasty.Enums;
 using podcasty.Interfaces;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace podcasty.Repos
 {
@@ -19,13 +16,15 @@ namespace podcasty.Repos
 
         public async Task<AdminStatsDto> GetStatsAsync()
         {
-            var totalPodcasts = await _db.Podcasts.CountAsync();
-            var totalEpisodes = await _db.Episodes.CountAsync();
-            var totalUsers = await _db.Users.CountAsync();
-            var totalComments = await _db.UserInteractions
+            // Run queries sequentially to avoid DbContext concurrency issues
+            var totalPodcasts = await _db.Podcasts.AsNoTracking().CountAsync();
+            var totalPodcastPlays = await _db.Podcasts.AsNoTracking().SumAsync(p => p.PlayCount);
+            var totalEpisodes = await _db.Episodes.AsNoTracking().CountAsync();
+            var totalUsers = await _db.Users.AsNoTracking().CountAsync();
+            var totalComments = await _db.UserInteractions.AsNoTracking()
                 .Where(x => x.Interaction == InteractionType.Comment)
                 .CountAsync();
-            var totalPodcastPlays = await _db.Podcasts.SumAsync(p => p.PlayCount);
+
             return new AdminStatsDto
             {
                 TotalPodcasts = totalPodcasts,
@@ -39,6 +38,7 @@ namespace podcasty.Repos
         public async Task<List<TopPodcastDto>> GetTopPodcastsAsync(int count)
         {
             return await _db.Podcasts
+                .AsNoTracking()
                 .OrderByDescending(p => p.PlayCount)
                 .Take(count)
                 .Select(p => new TopPodcastDto
@@ -52,20 +52,34 @@ namespace podcasty.Repos
 
         public async Task<List<TopUserDto>> GetTopUsersAsync(int count)
         {
-            return await _db.Users
-                .Select(u => new TopUserDto
-                {
-                    UserId = u.Id,
-                    UserName = u.UserName,
-                    InteractionCount = _db.UserInteractions.Count(x => x.UserId == u.Id)
-                })
-                .OrderByDescending(u => u.InteractionCount)
+            // Optimized: using GroupBy instead of N+1 subquery
+            var interactionCounts = await _db.UserInteractions
+                .AsNoTracking()
+                .GroupBy(x => x.UserId)
+                .Select(g => new { UserId = g.Key, Count = g.Count() })
+                .OrderByDescending(x => x.Count)
                 .Take(count)
                 .ToListAsync();
+
+            var userIds = interactionCounts.Select(x => x.UserId).ToList();
+            var users = await _db.Users
+                .AsNoTracking()
+                .Where(u => userIds.Contains(u.Id))
+                .Select(u => new { u.Id, u.UserName })
+                .ToListAsync();
+
+            return interactionCounts.Select(ic => new TopUserDto
+            {
+                UserId = ic.UserId,
+                UserName = users.FirstOrDefault(u => u.Id == ic.UserId)?.UserName ?? "Unknown",
+                InteractionCount = ic.Count
+            }).ToList();
         }
+
         public async Task<List<PodcastReportDto>> GetPodcastReportsAsync(DateTime start, DateTime end)
         {
             return await _db.Podcasts
+                .AsNoTracking()
                 .Where(p => p.CreatedAt >= start && p.CreatedAt <= end)
                 .Select(p => new PodcastReportDto
                 {
@@ -76,6 +90,5 @@ namespace podcasty.Repos
                 })
                 .ToListAsync();
         }
-
     }
 }

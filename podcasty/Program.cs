@@ -9,21 +9,34 @@ using podcasty.Models;
 using podcasty.Repos;
 using System.Text;
 
-
 internal class Program
 {
+    private const string MyAllowSpecificOrigins = "AllowFrontend";
     private static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
 
-        // Add services to the container.
 
-        builder.Services.AddControllers();
-        // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+        builder.Services.AddControllers()
+            .AddJsonOptions(options =>
+            {
+                // ✅ Use camelCase for JSON properties to match JavaScript conventions
+                options.JsonSerializerOptions.PropertyNamingPolicy = System.Text.Json.JsonNamingPolicy.CamelCase;
+                // ✅ Enums will be serialized as numbers by default (no converter needed)
+            });
         builder.Services.AddEndpointsApiExplorer();
-        builder.Services.AddSwaggerGen();
-        builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("CS")));
-        builder.Services.AddIdentity<User, IdentityRole<int>>().AddEntityFrameworkStores<AppDbContext>();
+
+        builder.Services.AddDbContext<AppDbContext>(options =>
+            options.UseSqlServer(builder.Configuration.GetConnectionString("CS")));
+
+        builder.Services.AddIdentity<User, IdentityRole<int>>(options =>
+        {
+            options.Password.RequiredLength = 8;
+            options.Password.RequireNonAlphanumeric = true;
+        })
+        .AddEntityFrameworkStores<AppDbContext>();
+
+        // Repository registrations
         builder.Services.AddScoped<IUserInteractionRepository, UserInteractionRepository>();
         builder.Services.AddScoped<IPodcastRepository, PodcastRepository>();
         builder.Services.AddScoped<IEpisodeRepository, EpisodeRepository>();
@@ -32,8 +45,10 @@ internal class Program
         builder.Services.AddScoped<IFilteringRepository, FilteringRepository>();
         builder.Services.AddScoped<IPlayHistoryRepository, PlayHistoryRepository>();
         builder.Services.AddScoped<IUserRepository, UserRepository>();
-        builder.Services.AddScoped<AppDbContext>();
         builder.Services.AddScoped<ISearchRepository, SearchRepository>();
+        builder.Services.AddScoped<INotificationRepository, NotificationRepository>();
+        builder.Services.AddScoped<IAnalyticsRepository, AnalyticsRepository>();
+        builder.Services.AddScoped<AppDbContext>();
 
         builder.Services.AddAuthentication(options =>
         {
@@ -43,77 +58,51 @@ internal class Program
         .AddJwtBearer(options =>
         {
             options.SaveToken = true;
+            options.RequireHttpsMetadata = false;
             options.TokenValidationParameters = new TokenValidationParameters
             {
                 ValidateIssuer = true,
                 ValidIssuer = builder.Configuration["JWT:ValidIssuer"],
-
                 ValidateAudience = true,
                 ValidAudience = builder.Configuration["JWT:ValidAudience"],
-
                 ValidateLifetime = true,
-
-
                 ValidateIssuerSigningKey = true,
                 IssuerSigningKey = new SymmetricSecurityKey(
-            Encoding.UTF8.GetBytes(builder.Configuration["JWT:SecretKey"])
-            ),
+                    Encoding.UTF8.GetBytes(builder.Configuration["JWT:SecretKey"] ?? "")
+                ),
+                ClockSkew = TimeSpan.Zero
             };
         });
+
         builder.Services.AddCors(options =>
         {
-            options.AddPolicy("txt",
-            builder =>
+            options.AddPolicy(MyAllowSpecificOrigins, policy =>
             {
-                builder.AllowAnyOrigin();
-                builder.AllowAnyMethod();
-                builder.AllowAnyHeader();
+                policy.WithOrigins("http://localhost:5173", "http://localhost:5174", "https://localhost:5173", "https://localhost:5174", "https://test.com")
+                       .AllowAnyMethod()
+                       .AllowAnyHeader()
+                       .AllowCredentials();
             });
         });
+
         builder.Services.AddSwaggerGen(c =>
         {
             c.SwaggerDoc("v1", new OpenApiInfo { Title = "podcasty", Version = "v1" });
-
-            // Add JWT Authentication
-            c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-            {
-                Description = @"JWT Authorization header using the Bearer scheme. \r\n\r\n 
-          Enter 'Bearer' [space] and then your token in the text input below.
-          Example: 'Bearer 12345abcdef'",
-                Name = "Authorization",
-                In = ParameterLocation.Header,
-                Type = SecuritySchemeType.ApiKey,
-                Scheme = "Bearer"
-            });
-
-            c.AddSecurityRequirement(new OpenApiSecurityRequirement()
-    {
-        {
-            new OpenApiSecurityScheme
-            {
-                Reference = new OpenApiReference
-                {
-                    Type = ReferenceType.SecurityScheme,
-                    Id = "Bearer"
-                },
-                Scheme = "oauth2",
-                Name = "Bearer",
-                In = ParameterLocation.Header,
-            },
-            new List<string>()
-        }
-    });
+            c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme { /* ... Config ... */ });
+            c.AddSecurityRequirement(new OpenApiSecurityRequirement() { /* ... Config ... */ });
         });
+
         var app = builder.Build();
 
-        // Configure the HTTP request pipeline.
         if (app.Environment.IsDevelopment())
         {
             app.UseSwagger();
             app.UseSwaggerUI();
         }
 
-        app.UseHttpsRedirection();
+        //app.UseHttpsRedirection();
+
+        app.UseCors(MyAllowSpecificOrigins);
 
         app.UseAuthentication();
 

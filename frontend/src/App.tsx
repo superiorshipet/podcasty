@@ -5,6 +5,7 @@ import { ProtectedRoute } from "./components/ProtectedRoute";
 import { GlobalPlayer } from "./components/GlobalPlayer";
 import { Footer } from "./components/Footer";
 import { LoginPromptModal } from "./components/LoginPromptModal";
+import { AdminFloatingButton } from "./components/AdminFloatingButton";
 
 import { LandingPage } from "./screens/LandingPage/LandingPage";
 import { Login } from "./screens/Login/Login";
@@ -14,7 +15,7 @@ import { Podcast } from "./screens/Podcast/Podcast";
 import { Profile } from "./screens/Profile/Profile";
 import { EditProfile } from "./screens/EditProfile/EditProfile";
 import { CreatorDashboard } from "./screens/CreatorDashboard/CreatorDashboard";
-import { AdminDashboard } from "./screens/Admin/AdminDashboard"; 
+import { AdminDashboard } from "./screens/Admin/AdminDashboard";
 import { MyLibrary } from "./screens/MyLibrary";
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
     <div className="flex flex-col min-h-screen font-sans text-neutral-950">
       <Navbar />
       {/* pt-[73px] accounts for fixed navbar height */}
-      <main className="flex-1 pt-[73px] pb-24"> 
+      <main className="flex-1 pt-[73px] pb-24">
         <Routes>
           {/* Public Routes */}
           <Route path="/" element={<LandingPage />} />
@@ -36,19 +37,23 @@ function App() {
             <Route path="/library" element={<MyLibrary />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/edit-profile" element={<EditProfile />} />
+            <Route path="/creator" element={<CreatorDashboard />} />
             <Route path="/creator/dashboard" element={<CreatorDashboard />} />
             <Route path="/admin" element={<AdminDashboard />} />
           </Route>
-          
+
           {/* 404 Route */}
           <Route path="*" element={<div className="p-20 text-center text-xl">404 - Page Not Found</div>} />
         </Routes>
       </main>
-      
+
       {/* Player persists across pages */}
       <GlobalPlayer />
       <Footer />
       <LoginPromptModal />
+
+      {/* Admin Floating Button - shows only for admins */}
+      <AdminFloatingButton />
     </div>
   );
 }
