@@ -2,6 +2,7 @@
 using podcasty.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using podcasty.Dtos;
+
 namespace podcasty.Repos
 {
     public class EpisodeRepository : IEpisodeRepository
@@ -17,10 +18,13 @@ namespace podcasty.Repos
         }
 
         public async Task<Episode?> GetByIdAsync(int id)
-            => await _db.Episodes.FindAsync(id);
+            => await _db.Episodes.AsNoTracking().FirstOrDefaultAsync(e => e.EpisodeId == id);
 
         public async Task<List<Episode>> GetByPodcastAsync(int podcastId)
-            => await _db.Episodes.Where(e => e.PodcastId == podcastId).ToListAsync();
+            => await _db.Episodes
+                .AsNoTracking()
+                .Where(e => e.PodcastId == podcastId)
+                .ToListAsync();
 
         public async Task<bool> UpdateAsync(Episode updated)
         {
@@ -39,37 +43,54 @@ namespace podcasty.Repos
 
         public async Task<bool> DeleteAsync(int id)
         {
-            var ep = await _db.Episodes.FindAsync(id);
-            if (ep == null) return false;
-            _db.Episodes.Remove(ep);
-            await _db.SaveChangesAsync();
-            return true;
+            try
+            {
+                // Set longer timeout for delete operations
+                _db.Database.SetCommandTimeout(120); // 2 minutes
+                
+                // First delete related Notifications (if any)
+                await _db.Notifications.Where(n => n.EpisodeId == id).ExecuteDeleteAsync();
+                
+                // Then delete related PlayHistory records (if any)
+                await _db.PlayHistories.Where(ph => ph.EpisodeId == id).ExecuteDeleteAsync();
+                
+                // Finally delete the episode
+                var deleted = await _db.Episodes.Where(e => e.EpisodeId == id).ExecuteDeleteAsync();
+                
+                return deleted > 0;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"DeleteAsync error: {ex.Message}");
+                throw;
+            }
         }
+
         public async Task<List<Episode>> GetAllAsync()
-        
-            =>  await _db.Episodes.ToListAsync(); 
+            => await _db.Episodes.AsNoTracking().ToListAsync();
+
         public bool AdminEdit(int id, EpisodeUpdateDto dto)
         {
-            var ep =  _db.Episodes.Find(id);
+            var ep = _db.Episodes.Find(id);
             if (ep == null) return false;
-            ep.Title = dto.Title;
-            ep.Description = dto.Description;
-            ep.AudioFile = dto.AudioFile;
-            ep.Duration = dto.Duration;
-            ep.EpisodeNumber = dto.EpisodeNumber;
-            ep.PlayCount = dto.PlayCount;
-            ep.PublishedAt = dto.PublishedAt;
-             _db.SaveChanges();
+            ep.Title = dto.Title ?? ep.Title;
+            ep.Description = dto.Description ?? ep.Description;
+            ep.AudioFile = dto.AudioFile ?? ep.AudioFile;
+            ep.Duration = dto.Duration ?? ep.Duration;
+            ep.EpisodeNumber = dto.EpisodeNumber ?? ep.EpisodeNumber;
+            ep.PlayCount = dto.PlayCount ?? ep.PlayCount;
+            ep.PublishedAt = dto.PublishedAt ?? ep.PublishedAt;
+            _db.SaveChanges();
             return true;
         }
+
         public bool setApprovalStatus(int id, bool approved)
         {
-            var ep =  _db.Episodes.Find(id);
+            var ep = _db.Episodes.Find(id);
             if (ep == null) return false;
             ep.IsApproved = approved;
-             _db.SaveChanges();
+            _db.SaveChanges();
             return true;
         }
     }
-
 }

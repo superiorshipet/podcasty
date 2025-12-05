@@ -16,7 +16,7 @@ namespace podcasty.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.21")
+                .HasAnnotation("ProductVersion", "9.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -219,6 +219,9 @@ namespace podcasty.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("CoverImage")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -238,9 +241,6 @@ namespace podcasty.Migrations
                     b.Property<int>("PodcastId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("PodcastId1")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("PublishedAt")
                         .HasColumnType("datetime2");
 
@@ -250,11 +250,53 @@ namespace podcasty.Migrations
 
                     b.HasKey("EpisodeId");
 
-                    b.HasIndex("PodcastId");
-
-                    b.HasIndex("PodcastId1");
+                    b.HasIndex("PodcastId")
+                        .HasDatabaseName("IX_Episodes_PodcastId");
 
                     b.ToTable("Episodes");
+                });
+
+            modelBuilder.Entity("podcasty.Models.Notification", b =>
+                {
+                    b.Property<int>("NotificationId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("NotificationId"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("EpisodeId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsRead")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PodcastId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("NotificationId");
+
+                    b.HasIndex("EpisodeId");
+
+                    b.HasIndex("PodcastId");
+
+                    b.HasIndex("UserId")
+                        .HasDatabaseName("IX_Notifications_UserId");
+
+                    b.ToTable("Notifications");
                 });
 
             modelBuilder.Entity("podcasty.Models.PlayHistory", b =>
@@ -284,7 +326,8 @@ namespace podcasty.Migrations
 
                     b.HasIndex("EpisodeId");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("UserId")
+                        .HasDatabaseName("IX_PlayHistories_UserId");
 
                     b.ToTable("PlayHistories");
                 });
@@ -331,9 +374,11 @@ namespace podcasty.Migrations
 
                     b.HasKey("PodcastId");
 
-                    b.HasIndex("CategoryId");
+                    b.HasIndex("CategoryId")
+                        .HasDatabaseName("IX_Podcasts_CategoryId");
 
-                    b.HasIndex("CreatorId");
+                    b.HasIndex("CreatorId")
+                        .HasDatabaseName("IX_Podcasts_CreatorId");
 
                     b.ToTable("Podcasts");
                 });
@@ -452,9 +497,11 @@ namespace podcasty.Migrations
 
                     b.HasKey("InteractionId");
 
-                    b.HasIndex("PodcastId");
+                    b.HasIndex("PodcastId")
+                        .HasDatabaseName("IX_UserInteractions_PodcastId");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("UserId")
+                        .HasDatabaseName("IX_UserInteractions_UserId");
 
                     b.ToTable("UserInteractions");
                 });
@@ -532,16 +579,38 @@ namespace podcasty.Migrations
             modelBuilder.Entity("podcasty.Models.Episode", b =>
                 {
                     b.HasOne("podcasty.Models.Podcast", "Podcast")
+                        .WithMany("Episodes")
+                        .HasForeignKey("PodcastId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Podcast");
+                });
+
+            modelBuilder.Entity("podcasty.Models.Notification", b =>
+                {
+                    b.HasOne("podcasty.Models.Episode", "Episode")
+                        .WithMany()
+                        .HasForeignKey("EpisodeId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("podcasty.Models.Podcast", "Podcast")
                         .WithMany()
                         .HasForeignKey("PodcastId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("podcasty.Models.Podcast", null)
-                        .WithMany("Episodes")
-                        .HasForeignKey("PodcastId1");
+                    b.HasOne("podcasty.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Episode");
 
                     b.Navigation("Podcast");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("podcasty.Models.PlayHistory", b =>

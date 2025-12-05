@@ -37,7 +37,7 @@ namespace podcasty.Controllers
             {
                 UserName = registerDto.UserName,
                 Email = registerDto.Email,
-                Role = UserRole.User, 
+                Role = UserRole.User,
                 CreatedAt = DateTime.UtcNow,
                 UpdatedAt = DateTime.UtcNow,
             };
@@ -46,7 +46,7 @@ namespace podcasty.Controllers
 
             if (result.Succeeded)
             {
-                return Ok(new { message = "Account Registered Successfully" });
+                return Ok(new { message = "Registration successful. Please log in." });
             }
 
             return BadRequest(result.Errors);
@@ -57,13 +57,19 @@ namespace podcasty.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return Unauthorized(new { message = "Invalid login data provided." });
+                return Unauthorized(new { message = "Invalid credentials." });
             }
 
             User login = await _userManager.FindByNameAsync(loginDto.UserName);
 
             if (login != null)
             {
+                // Check if user is banned
+                if (login.IsBanned)
+                {
+                    return Unauthorized(new { message = "Your account has been banned. Please contact support." });
+                }
+                
                 bool passwordValid = await _userManager.CheckPasswordAsync(login, loginDto.Password);
 
                 if (passwordValid)
@@ -89,12 +95,7 @@ namespace podcasty.Controllers
                         signingCredentials: signingCredentials
                         );
 
-                    return Ok(
-                            new
-                            {
-                                Token = new JwtSecurityTokenHandler().WriteToken(token)
-                            }
-                    );
+                    return Ok(new { Token = new JwtSecurityTokenHandler().WriteToken(token) });
                 }
             }
 

@@ -61,6 +61,7 @@
       "id": "src/screens/CreatorDashboard/CreatorDashboard.tsx",
       "label": "CreatorDashboard",
       "routes": [
+        "/creator",
         "/creator/dashboard"
       ]
     },
@@ -74,34 +75,50 @@
   ],
   "edges": [
     {
-      "id": "src\\screens\\LandingPage\\Container\\Container.tsx:19:25-to-src\\screens\\Browse\\Browse.tsx",
+      "id": "src\\screens\\LandingPage\\LandingPage.tsx:93:29-to-src\\screens\\Signup\\Signup.tsx",
       "source": "src\\screens\\LandingPage\\LandingPage.tsx",
-      "target": "src\\screens\\Browse\\Browse.tsx",
+      "target": "src\\screens\\Signup\\Signup.tsx",
       "data": {
-        "viaRoute": "/browse",
+        "viaRoute": "/signup",
         "trigger": {
-          "element": "navigate(\"/browse\")",
-          "line": 19,
-          "endLine": 19,
-          "column": 25,
-          "endColumn": 44,
-          "sourceFile": "src\\screens\\LandingPage\\Container\\Container.tsx"
+          "element": "navigate(\"/signup\")",
+          "line": 93,
+          "endLine": 93,
+          "column": 29,
+          "endColumn": 48,
+          "sourceFile": "src\\screens\\LandingPage\\LandingPage.tsx"
         }
       }
     },
     {
-      "id": "src\\screens\\LandingPage\\ContainerWrapper\\ContainerWrapper.tsx:76:25-to-src\\screens\\Browse\\Browse.tsx",
+      "id": "src\\screens\\LandingPage\\LandingPage.tsx:101:29-to-src\\screens\\Browse\\Browse.tsx",
       "source": "src\\screens\\LandingPage\\LandingPage.tsx",
       "target": "src\\screens\\Browse\\Browse.tsx",
       "data": {
         "viaRoute": "/browse",
         "trigger": {
           "element": "navigate(\"/browse\")",
-          "line": 76,
-          "endLine": 76,
-          "column": 25,
-          "endColumn": 44,
-          "sourceFile": "src\\screens\\LandingPage\\ContainerWrapper\\ContainerWrapper.tsx"
+          "line": 101,
+          "endLine": 101,
+          "column": 29,
+          "endColumn": 48,
+          "sourceFile": "src\\screens\\LandingPage\\LandingPage.tsx"
+        }
+      }
+    },
+    {
+      "id": "src\\screens\\LandingPage\\LandingPage.tsx:271:27-to-src\\screens\\Browse\\Browse.tsx",
+      "source": "src\\screens\\LandingPage\\LandingPage.tsx",
+      "target": "src\\screens\\Browse\\Browse.tsx",
+      "data": {
+        "viaRoute": "/browse",
+        "trigger": {
+          "element": "navigate(\"/browse\")",
+          "line": 271,
+          "endLine": 271,
+          "column": 27,
+          "endColumn": 46,
+          "sourceFile": "src\\screens\\LandingPage\\LandingPage.tsx"
         }
       }
     },
@@ -122,17 +139,17 @@
       }
     },
     {
-      "id": "src\\screens\\Login\\Login.tsx:106:27-to-src\\screens\\Signup\\Signup.tsx",
+      "id": "src\\screens\\Login\\Login.tsx:115:29-to-src\\screens\\Signup\\Signup.tsx",
       "source": "src\\screens\\Login\\Login.tsx",
       "target": "src\\screens\\Signup\\Signup.tsx",
       "data": {
         "viaRoute": "/signup",
         "trigger": {
           "element": "navigate(\"/signup\")",
-          "line": 106,
-          "endLine": 106,
-          "column": 27,
-          "endColumn": 46,
+          "line": 115,
+          "endLine": 115,
+          "column": 29,
+          "endColumn": 48,
           "sourceFile": "src\\screens\\Login\\Login.tsx"
         }
       }
@@ -154,31 +171,47 @@
       }
     },
     {
-      "id": "src\\screens\\Signup\\Signup.tsx:131:60-to-src\\screens\\Login\\Login.tsx",
+      "id": "src\\screens\\Signup\\Signup.tsx:140:62-to-src\\screens\\Login\\Login.tsx",
       "source": "src\\screens\\Signup\\Signup.tsx",
       "target": "src\\screens\\Login\\Login.tsx",
       "data": {
         "viaRoute": "/login",
         "trigger": {
           "element": "navigate(\"/login\")",
-          "line": 131,
-          "endLine": 131,
-          "column": 60,
-          "endColumn": 78,
+          "line": 140,
+          "endLine": 140,
+          "column": 62,
+          "endColumn": 80,
           "sourceFile": "src\\screens\\Signup\\Signup.tsx"
         }
       }
     },
     {
-      "id": "src\\screens\\Profile\\Profile.tsx:22:4-to-src\\screens\\CreatorDashboard\\CreatorDashboard.tsx",
+      "id": "src\\screens\\Podcast\\Podcast.tsx:231:20-to-src\\screens\\LandingPage\\LandingPage.tsx",
+      "source": "src\\screens\\Podcast\\Podcast.tsx",
+      "target": "src\\screens\\LandingPage\\LandingPage.tsx",
+      "data": {
+        "viaRoute": "/",
+        "trigger": {
+          "element": "navigate(\"/\")",
+          "line": 231,
+          "endLine": 231,
+          "column": 20,
+          "endColumn": 33,
+          "sourceFile": "src\\screens\\Podcast\\Podcast.tsx"
+        }
+      }
+    },
+    {
+      "id": "src\\screens\\Profile\\Profile.tsx:14:4-to-src\\screens\\CreatorDashboard\\CreatorDashboard.tsx",
       "source": "src\\screens\\Profile\\Profile.tsx",
       "target": "src\\screens\\CreatorDashboard\\CreatorDashboard.tsx",
       "data": {
         "viaRoute": "/creator/dashboard",
         "trigger": {
           "element": "navigate(\"/creator/dashboard\")",
-          "line": 22,
-          "endLine": 22,
+          "line": 14,
+          "endLine": 14,
           "column": 4,
           "endColumn": 34,
           "sourceFile": "src\\screens\\Profile\\Profile.tsx"
@@ -186,15 +219,15 @@
       }
     },
     {
-      "id": "src\\screens\\Profile\\Profile.tsx:75:29-to-src\\screens\\EditProfile\\EditProfile.tsx",
+      "id": "src\\screens\\Profile\\Profile.tsx:89:29-to-src\\screens\\EditProfile\\EditProfile.tsx",
       "source": "src\\screens\\Profile\\Profile.tsx",
       "target": "src\\screens\\EditProfile\\EditProfile.tsx",
       "data": {
         "viaRoute": "/edit-profile",
         "trigger": {
           "element": "navigate(\"/edit-profile\")",
-          "line": 75,
-          "endLine": 75,
+          "line": 89,
+          "endLine": 89,
           "column": 29,
           "endColumn": 54,
           "sourceFile": "src\\screens\\Profile\\Profile.tsx"
@@ -202,31 +235,47 @@
       }
     },
     {
-      "id": "src\\screens\\EditProfile\\EditProfile.tsx:118:6-to-src\\screens\\Profile\\Profile.tsx",
+      "id": "src\\screens\\Profile\\Profile.tsx:111:31-to-src\\screens\\CreatorDashboard\\CreatorDashboard.tsx",
+      "source": "src\\screens\\Profile\\Profile.tsx",
+      "target": "src\\screens\\CreatorDashboard\\CreatorDashboard.tsx",
+      "data": {
+        "viaRoute": "/creator/dashboard",
+        "trigger": {
+          "element": "navigate(\"/creator/dashboard\")",
+          "line": 111,
+          "endLine": 111,
+          "column": 31,
+          "endColumn": 61,
+          "sourceFile": "src\\screens\\Profile\\Profile.tsx"
+        }
+      }
+    },
+    {
+      "id": "src\\screens\\EditProfile\\EditProfile.tsx:148:23-to-src\\screens\\Profile\\Profile.tsx",
       "source": "src\\screens\\EditProfile\\EditProfile.tsx",
       "target": "src\\screens\\Profile\\Profile.tsx",
       "data": {
         "viaRoute": "/profile",
         "trigger": {
           "element": "navigate(\"/profile\")",
-          "line": 118,
-          "endLine": 118,
-          "column": 6,
-          "endColumn": 26,
+          "line": 148,
+          "endLine": 148,
+          "column": 23,
+          "endColumn": 43,
           "sourceFile": "src\\screens\\EditProfile\\EditProfile.tsx"
         }
       }
     },
     {
-      "id": "src\\screens\\EditProfile\\EditProfile.tsx:224:31-to-src\\screens\\Profile\\Profile.tsx",
+      "id": "src\\screens\\EditProfile\\EditProfile.tsx:258:31-to-src\\screens\\Profile\\Profile.tsx",
       "source": "src\\screens\\EditProfile\\EditProfile.tsx",
       "target": "src\\screens\\Profile\\Profile.tsx",
       "data": {
         "viaRoute": "/profile",
         "trigger": {
           "element": "navigate(\"/profile\")",
-          "line": 224,
-          "endLine": 224,
+          "line": 258,
+          "endLine": 258,
           "column": 31,
           "endColumn": 51,
           "sourceFile": "src\\screens\\EditProfile\\EditProfile.tsx"
@@ -234,17 +283,17 @@
       }
     },
     {
-      "id": "src\\screens\\Admin\\AdminDashboard.tsx:17:8-to-src\\screens\\LandingPage\\LandingPage.tsx",
+      "id": "src\\screens\\Admin\\AdminDashboard.tsx:53:12-to-src\\screens\\LandingPage\\LandingPage.tsx",
       "source": "src\\screens\\Admin\\AdminDashboard.tsx",
       "target": "src\\screens\\LandingPage\\LandingPage.tsx",
       "data": {
         "viaRoute": "/",
         "trigger": {
           "element": "navigate(\"/\")",
-          "line": 17,
-          "endLine": 17,
-          "column": 8,
-          "endColumn": 21,
+          "line": 53,
+          "endLine": 53,
+          "column": 12,
+          "endColumn": 25,
           "sourceFile": "src\\screens\\Admin\\AdminDashboard.tsx"
         }
       }

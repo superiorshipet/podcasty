@@ -4,6 +4,7 @@ namespace podcasty.Interfaces
 {
     public interface IUserInteractionRepository
     {
+        Task<UserInteraction?> GetExistingInteractionAsync(int userId, int podcastId, Enums.InteractionType interactionType);   
         Task<IEnumerable<UserInteraction>> GetByPodcastAsync(int podcastId);
         Task<IEnumerable<UserInteraction>> GetByUserAsync(int userId);
         Task<UserInteraction> AddAsync(UserInteraction interaction);

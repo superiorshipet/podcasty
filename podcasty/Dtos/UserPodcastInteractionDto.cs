@@ -2,7 +2,8 @@
 {
     public class UserPodcastInteractionDto
     {
-        public int UserId { get; set; }
+        // ✅ UserId يمكن أن يكون 0 أو null، سيتم استخراجه من الـ JWT Token في الـ Controller
+        public int UserId { get; set; } = 0;
         public int PodcastId { get; set; }
     }
     public class CommentInputDto : UserPodcastInteractionDto

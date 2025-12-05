@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using podcasty.Dtos;
 using podcasty.Interfaces;
 using System.Security.Claims;
-using System.Linq; 
 
 namespace podcasty.Controllers
 {
@@ -19,38 +18,49 @@ namespace podcasty.Controllers
             _userRepository = userRepository;
         }
 
-        [HttpPatch]
-        public async Task<IActionResult> UpdateProfile([FromBody] UpdateProfileDto dto)
+        // GET /api/Profile - Get current user's full profile from database
+        [HttpGet]
+        public async Task<IActionResult> GetProfile()
         {
-            Console.WriteLine("🔍 --- START PROFILE DEBUG ---");
-            foreach (var claim in User.Claims)
-            {
-                Console.WriteLine($"👉 Claim found: Type='{claim.Type}', Value='{claim.Value}'");
-            }
-
-            var userIdString = User.FindFirstValue(ClaimTypes.NameIdentifier) 
-                               ?? User.FindFirstValue("nameid")               
-                               ?? User.FindFirstValue("sub")                  
-                               ?? User.FindFirstValue("Id")                  
-                               ?? User.Claims.FirstOrDefault(c => c.Type.EndsWith("nameidentifier"))?.Value; // بحث بالنهاية
-
-            Console.WriteLine($"🎯 Extracted ID String: '{userIdString}'");
+            var userIdString = User.FindFirstValue(ClaimTypes.NameIdentifier)
+                               ?? User.FindFirstValue("nameid")
+                               ?? User.FindFirstValue("sub")
+                               ?? User.Claims.FirstOrDefault(c => c.Type.EndsWith("nameidentifier"))?.Value;
 
             if (string.IsNullOrEmpty(userIdString) || !int.TryParse(userIdString, out var userId))
             {
-                Console.WriteLine("❌ ERROR: Could not parse User ID from token.");
-                Console.WriteLine("--- END DEBUG ---");
-
-                return Unauthorized(new { message = "Token is valid but User ID is missing. Check server logs." });
+                return Unauthorized(new { message = "User ID not found in token." });
             }
 
             var user = await _userRepository.GetUserByIdAsync(userId);
+            if (user == null) return NotFound(new { message = "User not found." });
 
-            if (user == null)
+            return Ok(new {
+                id = user.Id,
+                userName = user.UserName,
+                email = user.Email,
+                role = user.Role.ToString(),
+                profilePicture = user.ProfilePicture,
+                bio = user.Bio
+            });
+        }
+
+        // PATCH /api/Profile - Update current user's profile
+        [HttpPatch]
+        public async Task<IActionResult> UpdateProfile([FromBody] UpdateProfileDto dto)
+        {
+            var userIdString = User.FindFirstValue(ClaimTypes.NameIdentifier)
+                               ?? User.FindFirstValue("nameid")
+                               ?? User.FindFirstValue("sub")
+                               ?? User.Claims.FirstOrDefault(c => c.Type.EndsWith("nameidentifier"))?.Value;
+
+            if (string.IsNullOrEmpty(userIdString) || !int.TryParse(userIdString, out var userId))
             {
-                Console.WriteLine($"❌ ERROR: User ID {userId} not found in Database.");
-                return NotFound(new { message = "User not found." });
+                return Unauthorized(new { message = "User ID not found in token." });
             }
+
+            var user = await _userRepository.GetUserByIdAsync(userId);
+            if (user == null) return NotFound(new { message = "User not found." });
 
             bool hasChanges = false;
 
@@ -80,12 +90,10 @@ namespace podcasty.Controllers
 
                 if (result)
                 {
-                    Console.WriteLine("✅ SUCCESS: User updated.");
                     return Ok(new { message = "Profile updated successfully" });
                 }
             }
 
-            Console.WriteLine("⚠️ No changes applied or Update failed.");
             return Ok(new { message = "No changes applied" });
         }
     }

@@ -2,14 +2,14 @@ export interface User {
   id: number;
   userName: string;
   email: string;
-  role: string; // "User", "Creator", "Admin"
+  role: string;
   firstName?: string;
   lastName?: string;
   profilePicture?: string;
   bio?: string;
   isBanned?: boolean;
   token?: string;
-  initial?: string; // خاص بالواجهة الأمامية
+  initial?: string;
 }
 
 export interface LoginData {
@@ -43,12 +43,12 @@ export interface Podcast {
   title: string;
   description: string;
   coverImage: string;
-  status: number;
+  status?: number;
   playCount: number;
   createdAt: string;
   updatedAt: string;
-  isApproved: boolean;
-  creator?: User; 
+  isApproved?: boolean;
+  creator?: User;
   episodes?: Episode[];
 }
 
@@ -61,12 +61,12 @@ export interface PodcastCreateData {
 }
 
 export interface PodcastUpdateData {
-  podcastId: number;
-  title: string;
+  podcastId?: number;
+  title?: string;
   description?: string;
   coverImage?: string;
-  categoryId: number;
-  status: number;
+  categoryId?: number;
+  status?: number;
 }
 
 export interface Episode {
@@ -74,12 +74,14 @@ export interface Episode {
   podcastId: number;
   title: string;
   description: string;
-  audioFile: string;
+  audioFile?: string;
+  coverImage?: string;
   duration: number;
   episodeNumber: number;
   playCount: number;
   publishedAt: string;
   isApproved: boolean;
+  hasAudio?: boolean;
 }
 
 export interface EpisodeCreateData {
@@ -87,29 +89,30 @@ export interface EpisodeCreateData {
   title: string;
   description: string;
   audioFile: string;
+  coverImage?: string;
   duration?: number;
   episodeNumber?: number;
   publishedAt?: string;
 }
 
 export interface EpisodeUpdateData {
-  episodeId: number;
-  podcastId: number;
-  title: string;
-  description: string;
-  audioFile: string;
+  episodeId?: number;
+  podcastId?: number;
+  title?: string;
+  description?: string;
+  audioFile?: string;
   duration?: number;
   episodeNumber?: number;
-  playCount: number;
-  publishedAt: string;
+  playCount?: number;
+  publishedAt?: string;
 }
 
 export interface Category {
   categoryId: number;
   name: string;
   icon?: string;
-  id?: string | number; // للتوافق مع بعض المكونات القديمة
-  label?: string;       // للتوافق مع بعض المكونات القديمة
+  id?: string | number;
+  label?: string;
 }
 
 export interface UserInteraction {
@@ -156,9 +159,9 @@ export interface SearchResult {
 }
 
 export interface PlayHistoryCreateData {
-    episodeId: number;
-    progressSeconds: number;
-    completed: boolean;
+  episodeId: number;
+  progressSeconds: number;
+  completed: boolean;
 }
 
 export interface PlayHistory {
