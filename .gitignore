@@ -5,3 +5,7 @@ obj/
 *.exe
 *.dll
 *.pdb
+.vs/
+bin/
+obj/
+podcasty/podcasty.csproj.user
