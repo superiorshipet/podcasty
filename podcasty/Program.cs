@@ -35,6 +35,7 @@ internal class Program
         builder.Services.AddScoped<AppDbContext>();
         builder.Services.AddScoped<ISearchRepository, SearchRepository>();
 
+
         builder.Services.AddAuthentication(options =>
         {
             options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
