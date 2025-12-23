@@ -6,6 +6,7 @@
       "routes": [
         "/"
       ],
+      "type": "screen",
       "isRoot": true
     },
     {
@@ -13,49 +14,56 @@
       "label": "Login",
       "routes": [
         "/login"
-      ]
+      ],
+      "type": "screen"
     },
     {
       "id": "src/screens/Signup/Signup.tsx",
       "label": "Signup",
       "routes": [
         "/signup"
-      ]
+      ],
+      "type": "screen"
     },
     {
       "id": "src/screens/Browse/Browse.tsx",
       "label": "Browse",
       "routes": [
         "/browse"
-      ]
+      ],
+      "type": "screen"
     },
     {
       "id": "src/screens/Podcast/Podcast.tsx",
       "label": "Podcast",
       "routes": [
         "/podcast/:podcastId"
-      ]
+      ],
+      "type": "screen"
     },
     {
       "id": "src/screens/MyLibrary/MyLibrary.tsx",
       "label": "MyLibrary",
       "routes": [
         "/library"
-      ]
+      ],
+      "type": "screen"
     },
     {
       "id": "src/screens/Profile/Profile.tsx",
       "label": "Profile",
       "routes": [
         "/profile"
-      ]
+      ],
+      "type": "screen"
     },
     {
       "id": "src/screens/EditProfile/EditProfile.tsx",
       "label": "EditProfile",
       "routes": [
         "/edit-profile"
-      ]
+      ],
+      "type": "screen"
     },
     {
       "id": "src/screens/CreatorDashboard/CreatorDashboard.tsx",
@@ -63,14 +71,52 @@
       "routes": [
         "/creator",
         "/creator/dashboard"
-      ]
+      ],
+      "type": "screen"
     },
     {
       "id": "src/screens/Admin/AdminDashboard.tsx",
       "label": "AdminDashboard",
       "routes": [
         "/admin"
-      ]
+      ],
+      "type": "screen"
+    },
+    {
+      "id": "src/components/AdminFloatingButton.tsx",
+      "label": "AdminFloatingButton",
+      "routes": [],
+      "type": "component"
+    },
+    {
+      "id": "src/components/LoginPromptModal.tsx",
+      "label": "LoginPromptModal",
+      "routes": [],
+      "type": "component"
+    },
+    {
+      "id": "src/components/Navbar.tsx",
+      "label": "Navbar",
+      "routes": [],
+      "type": "component"
+    },
+    {
+      "id": "src/components/ProtectedRoute.tsx",
+      "label": "ProtectedRoute",
+      "routes": [],
+      "type": "component"
+    },
+    {
+      "id": "src/screens/LandingPage/Container/Container.tsx",
+      "label": "Container",
+      "routes": [],
+      "type": "component"
+    },
+    {
+      "id": "src/screens/LandingPage/ContainerWrapper/ContainerWrapper.tsx",
+      "label": "ContainerWrapper",
+      "routes": [],
+      "type": "component"
     }
   ],
   "edges": [
@@ -139,15 +185,15 @@
       }
     },
     {
-      "id": "src\\screens\\Login\\Login.tsx:115:29-to-src\\screens\\Signup\\Signup.tsx",
+      "id": "src\\screens\\Login\\Login.tsx:123:29-to-src\\screens\\Signup\\Signup.tsx",
       "source": "src\\screens\\Login\\Login.tsx",
       "target": "src\\screens\\Signup\\Signup.tsx",
       "data": {
         "viaRoute": "/signup",
         "trigger": {
           "element": "navigate(\"/signup\")",
-          "line": 115,
-          "endLine": 115,
+          "line": 123,
+          "endLine": 123,
           "column": 29,
           "endColumn": 48,
           "sourceFile": "src\\screens\\Login\\Login.tsx"
@@ -171,15 +217,15 @@
       }
     },
     {
-      "id": "src\\screens\\Signup\\Signup.tsx:140:62-to-src\\screens\\Login\\Login.tsx",
+      "id": "src\\screens\\Signup\\Signup.tsx:131:62-to-src\\screens\\Login\\Login.tsx",
       "source": "src\\screens\\Signup\\Signup.tsx",
       "target": "src\\screens\\Login\\Login.tsx",
       "data": {
         "viaRoute": "/login",
         "trigger": {
           "element": "navigate(\"/login\")",
-          "line": 140,
-          "endLine": 140,
+          "line": 131,
+          "endLine": 131,
           "column": 62,
           "endColumn": 80,
           "sourceFile": "src\\screens\\Signup\\Signup.tsx"
@@ -187,15 +233,15 @@
       }
     },
     {
-      "id": "src\\screens\\Podcast\\Podcast.tsx:231:20-to-src\\screens\\LandingPage\\LandingPage.tsx",
+      "id": "src\\screens\\Podcast\\Podcast.tsx:236:20-to-src\\screens\\LandingPage\\LandingPage.tsx",
       "source": "src\\screens\\Podcast\\Podcast.tsx",
       "target": "src\\screens\\LandingPage\\LandingPage.tsx",
       "data": {
         "viaRoute": "/",
         "trigger": {
           "element": "navigate(\"/\")",
-          "line": 231,
-          "endLine": 231,
+          "line": 236,
+          "endLine": 236,
           "column": 20,
           "endColumn": 33,
           "sourceFile": "src\\screens\\Podcast\\Podcast.tsx"
@@ -283,18 +329,194 @@
       }
     },
     {
-      "id": "src\\screens\\Admin\\AdminDashboard.tsx:53:12-to-src\\screens\\LandingPage\\LandingPage.tsx",
+      "id": "src\\screens\\Admin\\AdminDashboard.tsx:62:12-to-src\\screens\\LandingPage\\LandingPage.tsx",
       "source": "src\\screens\\Admin\\AdminDashboard.tsx",
       "target": "src\\screens\\LandingPage\\LandingPage.tsx",
       "data": {
         "viaRoute": "/",
         "trigger": {
           "element": "navigate(\"/\")",
-          "line": 53,
-          "endLine": 53,
+          "line": 62,
+          "endLine": 62,
           "column": 12,
           "endColumn": 25,
           "sourceFile": "src\\screens\\Admin\\AdminDashboard.tsx"
+        }
+      }
+    },
+    {
+      "id": "src\\components\\AdminFloatingButton.tsx:15:27-to-src\\screens\\Admin\\AdminDashboard.tsx",
+      "source": "src\\components\\AdminFloatingButton.tsx",
+      "target": "src\\screens\\Admin\\AdminDashboard.tsx",
+      "data": {
+        "viaRoute": "/admin",
+        "trigger": {
+          "element": "navigate(\"/admin\")",
+          "line": 15,
+          "endLine": 15,
+          "column": 27,
+          "endColumn": 45,
+          "sourceFile": "src\\components\\AdminFloatingButton.tsx"
+        }
+      }
+    },
+    {
+      "id": "src\\components\\LoginPromptModal.tsx:15:4-to-src\\screens\\Login\\Login.tsx",
+      "source": "src\\components\\LoginPromptModal.tsx",
+      "target": "src\\screens\\Login\\Login.tsx",
+      "data": {
+        "viaRoute": "/login",
+        "trigger": {
+          "element": "navigate(\"/login\")",
+          "line": 15,
+          "endLine": 15,
+          "column": 4,
+          "endColumn": 22,
+          "sourceFile": "src\\components\\LoginPromptModal.tsx"
+        }
+      }
+    },
+    {
+      "id": "src\\components\\Navbar.tsx:13:33-to-src\\screens\\LandingPage\\LandingPage.tsx",
+      "source": "src\\components\\Navbar.tsx",
+      "target": "src\\screens\\LandingPage\\LandingPage.tsx",
+      "data": {
+        "viaRoute": "/",
+        "trigger": {
+          "element": "navigate(\"/\")",
+          "line": 13,
+          "endLine": 13,
+          "column": 33,
+          "endColumn": 46,
+          "sourceFile": "src\\components\\Navbar.tsx"
+        }
+      }
+    },
+    {
+      "id": "src\\components\\Navbar.tsx:16:33-to-src\\screens\\Browse\\Browse.tsx",
+      "source": "src\\components\\Navbar.tsx",
+      "target": "src\\screens\\Browse\\Browse.tsx",
+      "data": {
+        "viaRoute": "/browse",
+        "trigger": {
+          "element": "navigate(\"/browse\")",
+          "line": 16,
+          "endLine": 16,
+          "column": 33,
+          "endColumn": 52,
+          "sourceFile": "src\\components\\Navbar.tsx"
+        }
+      }
+    },
+    {
+      "id": "src\\components\\Navbar.tsx:27:37-to-src\\screens\\MyLibrary\\MyLibrary.tsx",
+      "source": "src\\components\\Navbar.tsx",
+      "target": "src\\screens\\MyLibrary\\MyLibrary.tsx",
+      "data": {
+        "viaRoute": "/library",
+        "trigger": {
+          "element": "navigate(\"/library\")",
+          "line": 27,
+          "endLine": 27,
+          "column": 37,
+          "endColumn": 57,
+          "sourceFile": "src\\components\\Navbar.tsx"
+        }
+      }
+    },
+    {
+      "id": "src\\components\\Navbar.tsx:31:31-to-src\\screens\\Profile\\Profile.tsx",
+      "source": "src\\components\\Navbar.tsx",
+      "target": "src\\screens\\Profile\\Profile.tsx",
+      "data": {
+        "viaRoute": "/profile",
+        "trigger": {
+          "element": "navigate(\"/profile\")",
+          "line": 31,
+          "endLine": 31,
+          "column": 31,
+          "endColumn": 51,
+          "sourceFile": "src\\components\\Navbar.tsx"
+        }
+      }
+    },
+    {
+      "id": "src\\components\\Navbar.tsx:52:37-to-src\\screens\\Login\\Login.tsx",
+      "source": "src\\components\\Navbar.tsx",
+      "target": "src\\screens\\Login\\Login.tsx",
+      "data": {
+        "viaRoute": "/login",
+        "trigger": {
+          "element": "navigate(\"/login\")",
+          "line": 52,
+          "endLine": 52,
+          "column": 37,
+          "endColumn": 55,
+          "sourceFile": "src\\components\\Navbar.tsx"
+        }
+      }
+    },
+    {
+      "id": "src\\components\\Navbar.tsx:55:37-to-src\\screens\\Signup\\Signup.tsx",
+      "source": "src\\components\\Navbar.tsx",
+      "target": "src\\screens\\Signup\\Signup.tsx",
+      "data": {
+        "viaRoute": "/signup",
+        "trigger": {
+          "element": "navigate(\"/signup\")",
+          "line": 55,
+          "endLine": 55,
+          "column": 37,
+          "endColumn": 56,
+          "sourceFile": "src\\components\\Navbar.tsx"
+        }
+      }
+    },
+    {
+      "id": "src\\components\\ProtectedRoute.tsx:13:11-to-src\\screens\\Login\\Login.tsx",
+      "source": "src\\components\\ProtectedRoute.tsx",
+      "target": "src\\screens\\Login\\Login.tsx",
+      "data": {
+        "viaRoute": "/login",
+        "trigger": {
+          "element": "<Navigate to=\"/login\" replace />",
+          "line": 13,
+          "endLine": 13,
+          "column": 11,
+          "endColumn": 43,
+          "sourceFile": "src\\components\\ProtectedRoute.tsx"
+        }
+      }
+    },
+    {
+      "id": "src\\screens\\LandingPage\\Container\\Container.tsx:19:25-to-src\\screens\\Browse\\Browse.tsx",
+      "source": "src\\screens\\LandingPage\\Container\\Container.tsx",
+      "target": "src\\screens\\Browse\\Browse.tsx",
+      "data": {
+        "viaRoute": "/browse",
+        "trigger": {
+          "element": "navigate(\"/browse\")",
+          "line": 19,
+          "endLine": 19,
+          "column": 25,
+          "endColumn": 44,
+          "sourceFile": "src\\screens\\LandingPage\\Container\\Container.tsx"
+        }
+      }
+    },
+    {
+      "id": "src\\screens\\LandingPage\\ContainerWrapper\\ContainerWrapper.tsx:70:25-to-src\\screens\\Browse\\Browse.tsx",
+      "source": "src\\screens\\LandingPage\\ContainerWrapper\\ContainerWrapper.tsx",
+      "target": "src\\screens\\Browse\\Browse.tsx",
+      "data": {
+        "viaRoute": "/browse",
+        "trigger": {
+          "element": "navigate(\"/browse\")",
+          "line": 70,
+          "endLine": 70,
+          "column": 25,
+          "endColumn": 44,
+          "sourceFile": "src\\screens\\LandingPage\\ContainerWrapper\\ContainerWrapper.tsx"
         }
       }
     }

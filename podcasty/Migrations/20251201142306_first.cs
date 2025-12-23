@@ -10,12 +10,13 @@ namespace podcasty.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<bool>(
-                name: "IsApproved",
-                table: "Podcasts",
-                type: "bit",
-                nullable: false,
-                defaultValue: false);
+            migrationBuilder.Sql(@"
+  IF COL_LENGTH('Podcasts', 'IsApproved') IS NULL
+  BEGIN
+      ALTER TABLE [Podcasts] ADD [IsApproved] bit NOT NULL DEFAULT(0);
+  END
+");
+
 
             migrationBuilder.AddColumn<int>(
                 name: "PlayCount",
@@ -24,12 +25,7 @@ namespace podcasty.Migrations
                 nullable: false,
                 defaultValue: 0);
 
-            migrationBuilder.AddColumn<bool>(
-                name: "IsApproved",
-                table: "Episodes",
-                type: "bit",
-                nullable: false,
-                defaultValue: false);
+            
 
             migrationBuilder.AddColumn<bool>(
                 name: "IsBanned",
